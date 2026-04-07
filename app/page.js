@@ -18,7 +18,7 @@ export default function Home() {
       titel: "Akuthilfe",
       dauer: "flexibel",
       preis: "nach Absprache",
-      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist und du sofort Klarheit, Entlastung und Orientierung brauchst.",
+      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist.",
     },
   ];
 
@@ -53,17 +53,17 @@ export default function Home() {
     <main
       style={{
         fontFamily: "Arial, sans-serif",
-        color: "#2f2a31",
+        color: "#3a2f34",
         background:
-          "linear-gradient(180deg, #fff8f7 0%, #fffdfc 38%, #f7f0f8 100%)",
+          "linear-gradient(180deg, #fffaf9 0%, #fffdfc 40%, #f8f3f6 100%)",
         minHeight: "100vh",
       }}
     >
       <section
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
-          padding: "28px 20px 10px",
+          padding: "22px 20px 8px",
         }}
       >
         <nav
@@ -73,14 +73,14 @@ export default function Home() {
             alignItems: "center",
             gap: "16px",
             flexWrap: "wrap",
-            marginBottom: "28px",
+            marginBottom: "24px",
           }}
         >
           <div
             style={{
               fontWeight: 800,
               fontSize: "24px",
-              color: "#9d4f68",
+              color: "#a0546a",
               letterSpacing: "-0.5px",
             }}
           >
@@ -113,9 +113,9 @@ export default function Home() {
 
       <section
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
-          padding: "28px 20px 72px",
+          padding: "36px 20px 72px",
         }}
       >
         <div
@@ -133,7 +133,7 @@ export default function Home() {
                 padding: "10px 16px",
                 borderRadius: "999px",
                 background: "#f5e3e8",
-                color: "#9b5067",
+                color: "#a0546a",
                 fontWeight: 700,
                 fontSize: "14px",
                 marginBottom: "18px",
@@ -144,10 +144,10 @@ export default function Home() {
 
             <h1
               style={{
-                fontSize: "clamp(42px, 7vw, 78px)",
-                lineHeight: 1.02,
+                fontSize: "clamp(42px, 7vw, 76px)",
+                lineHeight: 1.03,
                 margin: "0 0 18px",
-                color: "#9d4f68",
+                color: "#1a1a1a",
                 letterSpacing: "-1.8px",
                 maxWidth: "760px",
               }}
@@ -157,9 +157,9 @@ export default function Home() {
 
             <p
               style={{
-                fontSize: "clamp(19px, 2.5vw, 28px)",
+                fontSize: "clamp(19px, 2.4vw, 28px)",
                 lineHeight: 1.5,
-                maxWidth: "780px",
+                maxWidth: "760px",
                 margin: "0 0 18px",
                 color: "#4b4650",
               }}
@@ -172,9 +172,9 @@ export default function Home() {
               style={{
                 fontSize: "17px",
                 lineHeight: 1.85,
-                maxWidth: "720px",
+                maxWidth: "710px",
                 margin: "0 0 28px",
-                color: "#6a6470",
+                color: "#69636e",
               }}
             >
               Wenn alles gleichzeitig laut wird, helfen keine langen
@@ -201,47 +201,42 @@ export default function Home() {
           <div>
             <div
               style={{
-                position: "relative",
-                minHeight: "480px",
+                minHeight: "430px",
                 borderRadius: "34px",
-                overflow: "hidden",
                 background:
-                  "linear-gradient(145deg, #d898b0 0%, #b26da2 45%, #7f6fd9 100%)",
-                boxShadow: "0 24px 60px rgba(141, 84, 120, 0.22)",
+                  "linear-gradient(145deg, #f0c8d4 0%, #dca6be 45%, #c9b5de 100%)",
+                boxShadow: "0 24px 60px rgba(141, 84, 120, 0.16)",
                 padding: "16px",
               }}
             >
               <div
                 style={{
-                  position: "absolute",
-                  inset: "0",
-                  background:
-                    "radial-gradient(circle at top left, rgba(255,255,255,0.38), transparent 35%), radial-gradient(circle at bottom right, rgba(255,255,255,0.18), transparent 30%)",
-                }}
-              />
-
-              <div
-                style={{
-                  position: "relative",
                   height: "100%",
-                  minHeight: "448px",
+                  minHeight: "398px",
                   borderRadius: "26px",
                   overflow: "hidden",
-                  background: "rgba(255,255,255,0.08)",
-                  backdropFilter: "blur(3px)",
-                  border: "1px solid rgba(255,255,255,0.2)",
+                  background: "rgba(255,255,255,0.22)",
+                  border: "1px solid rgba(255,255,255,0.35)",
                 }}
               >
-                <img
-                  src="/profil.jpg"
-                  alt="Denise Schäfer"
+                <div
                   style={{
+                    position: "relative",
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
-                    display: "block",
                   }}
-                />
+                >
+                  <img
+                    src="/profil.jpg.jfif"
+                    alt="Denise Schäfer"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -251,13 +246,13 @@ export default function Home() {
       <section
         id="angebote"
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
-          padding: "0 20px 80px",
+          padding: "0 20px 78px",
         }}
       >
         <div style={sectionIntroWrap}>
-          <h2 style={sectionTitle}>Angebote</h2>
+          <h2 style={sectionTitleBlack}>Angebote</h2>
           <p style={sectionText}>
             Klar, warm und unkompliziert. Du bekommst keine Theorie-Flut,
             sondern konkrete Hilfe, die wirklich in deinen Alltag passt.
@@ -285,7 +280,7 @@ export default function Home() {
                   "0 14px 34px rgba(143, 85, 115, 0.08)";
               }}
               style={{
-                background: "rgba(255,255,255,0.9)",
+                background: "rgba(255,255,255,0.92)",
                 border: "1px solid #f0dfe6",
                 borderRadius: "28px",
                 padding: "28px",
@@ -300,7 +295,7 @@ export default function Home() {
                   padding: "9px 14px",
                   borderRadius: "999px",
                   background: "#f7e8ee",
-                  color: "#9d4f68",
+                  color: "#a0546a",
                   fontWeight: 700,
                   fontSize: "13px",
                 }}
@@ -312,7 +307,7 @@ export default function Home() {
                 style={{
                   margin: "0 0 14px",
                   fontSize: "22px",
-                  color: "#8e4760",
+                  color: "#1a1a1a",
                 }}
               >
                 {item.titel}
@@ -333,7 +328,7 @@ export default function Home() {
                 style={{
                   fontSize: "38px",
                   fontWeight: 800,
-                  color: "#a05068",
+                  color: "#a0546a",
                   letterSpacing: "-0.5px",
                 }}
               >
@@ -347,7 +342,7 @@ export default function Home() {
       <section
         id="hilfe"
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "0 20px 84px",
         }}
@@ -361,14 +356,14 @@ export default function Home() {
             boxShadow: "0 18px 42px rgba(122, 76, 112, 0.08)",
           }}
         >
-          <h2 style={{ ...sectionTitle, marginBottom: "18px" }}>
+          <h2 style={{ ...sectionTitleBlack, marginBottom: "18px" }}>
             Wobei ich helfe
           </h2>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
               gap: "16px",
             }}
           >
@@ -379,8 +374,8 @@ export default function Home() {
                   background: "#fff",
                   border: "1px solid #f2e3e8",
                   borderRadius: "20px",
-                  padding: "18px 18px",
-                  color: "#5a5460",
+                  padding: "18px",
+                  color: "#4a4349",
                   fontWeight: 600,
                   boxShadow: "0 10px 24px rgba(100, 70, 100, 0.05)",
                 }}
@@ -395,48 +390,82 @@ export default function Home() {
       <section
         id="uebermich"
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "0 20px 84px",
         }}
       >
         <div
           style={{
-            background: "rgba(255,255,255,0.86)",
+            background: "rgba(255,255,255,0.9)",
             border: "1px solid #f2e1e8",
             borderRadius: "34px",
             padding: "36px",
             boxShadow: "0 18px 42px rgba(120, 82, 112, 0.08)",
           }}
         >
-          <h2 style={{ ...sectionTitle, marginBottom: "14px" }}>Über mich</h2>
-          <p
+          <div
             style={{
-              margin: 0,
-              maxWidth: "920px",
-              lineHeight: 1.9,
-              color: "#5d5662",
-              fontSize: "17px",
+              display: "grid",
+              gridTemplateColumns: "1fr 320px",
+              gap: "32px",
+              alignItems: "center",
             }}
           >
-            Ich begleite Eltern und Erwachsene im Alltag. Mir ist wichtig, dass
-            du dich verstanden fühlst und schnell konkrete Hilfe bekommst –
-            ruhig, klar und ohne unnötigen Druck. Du musst nicht erst alles
-            perfekt erklären können. Wir schauen gemeinsam, was gerade hilft.
-          </p>
+            <div>
+              <h2 style={{ ...sectionTitleBlack, marginBottom: "14px" }}>
+                Über mich
+              </h2>
+              <p
+                style={{
+                  margin: 0,
+                  lineHeight: 1.9,
+                  color: "#5d5662",
+                  fontSize: "17px",
+                }}
+              >
+                Ich begleite Eltern und Erwachsene im Alltag. Mir ist wichtig,
+                dass du dich verstanden fühlst und schnell konkrete Hilfe
+                bekommst – ruhig, klar und ohne unnötigen Druck. Du musst nicht
+                erst alles perfekt erklären können. Wir schauen gemeinsam, was
+                gerade hilft.
+              </p>
+            </div>
+
+            <div
+              style={{
+                width: "100%",
+              }}
+            >
+              <img
+                src="/profil.jpg.jfif"
+                alt="Denise Schäfer"
+                style={{
+                  width: "100%",
+                  maxWidth: "320px",
+                  height: "380px",
+                  objectFit: "cover",
+                  borderRadius: "26px",
+                  display: "block",
+                  boxShadow: "0 18px 40px rgba(133, 88, 115, 0.14)",
+                  marginLeft: "auto",
+                }}
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       <section
         id="kontakt"
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "0 20px 36px",
         }}
       >
         <div style={sectionIntroWrap}>
-          <h2 style={sectionTitle}>Kontakt</h2>
+          <h2 style={sectionTitleBlack}>Kontakt</h2>
           <p style={sectionText}>
             Du kannst dich gern melden, wenn du Fragen hast oder ein Gespräch
             vereinbaren möchtest.
@@ -468,7 +497,7 @@ export default function Home() {
                 style={{
                   margin: "0 0 12px",
                   fontSize: "22px",
-                  color: "#964d65",
+                  color: "#1a1a1a",
                 }}
               >
                 {item.titel}
@@ -490,7 +519,7 @@ export default function Home() {
 
       <section
         style={{
-          maxWidth: "1180px",
+          maxWidth: "1100px",
           margin: "0 auto",
           padding: "34px 20px 100px",
         }}
@@ -500,9 +529,9 @@ export default function Home() {
             borderRadius: "34px",
             padding: "38px 34px",
             background:
-              "linear-gradient(135deg, #c77899 0%, #9d5cb9 55%, #6f79da 100%)",
+              "linear-gradient(135deg, #c97e97 0%, #b26a97 55%, #8f7cc8 100%)",
             color: "#fff",
-            boxShadow: "0 28px 60px rgba(122, 77, 140, 0.2)",
+            boxShadow: "0 28px 60px rgba(122, 77, 140, 0.18)",
           }}
         >
           <h2
@@ -520,7 +549,7 @@ export default function Home() {
               margin: "0 0 22px",
               maxWidth: "760px",
               lineHeight: 1.8,
-              color: "rgba(255,255,255,0.92)",
+              color: "rgba(255,255,255,0.94)",
               fontSize: "17px",
             }}
           >
@@ -573,7 +602,7 @@ export default function Home() {
 
 const navLink = {
   textDecoration: "none",
-  color: "#7d6672",
+  color: "#6d6570",
   fontWeight: 700,
 };
 
@@ -590,7 +619,7 @@ const primaryBtn = {
 const secondaryBtn = {
   textDecoration: "none",
   background: "#fff",
-  color: "#9d4f68",
+  color: "#a0546a",
   padding: "15px 24px",
   borderRadius: "999px",
   fontWeight: 800,
@@ -601,10 +630,10 @@ const sectionIntroWrap = {
   marginBottom: "28px",
 };
 
-const sectionTitle = {
+const sectionTitleBlack = {
   fontSize: "clamp(34px, 5vw, 54px)",
   margin: "0 0 10px",
-  color: "#9d4f68",
+  color: "#1a1a1a",
   letterSpacing: "-1px",
 };
 
