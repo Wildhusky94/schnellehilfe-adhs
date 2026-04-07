@@ -6,7 +6,7 @@ export default function Home() {
       titel: "Erstgespräch",
       dauer: "ca. 60–90 Minuten",
       preis: "90 €",
-      text: "Wir schauen gemeinsam auf deine Situation und klären, welche Unterstützung dir oder deiner Familie gerade wirklich hilft.",
+      text: "Wir schauen gemeinsam auf Ihre Situation und klären, welche Unterstützung Ihnen oder Ihrer Familie gerade wirklich hilft.",
     },
     {
       titel: "Einzelcoaching",
@@ -18,7 +18,7 @@ export default function Home() {
       titel: "Akuthilfe",
       dauer: "flexibel",
       preis: "nach Absprache",
-      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist.",
+      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist und Sie sofort Entlastung brauchen.",
     },
   ];
 
@@ -50,597 +50,662 @@ export default function Home() {
   ];
 
   return (
-    <main
-      style={{
-        fontFamily: "Arial, sans-serif",
-        color: "#3a2f34",
-        background:
-          "linear-gradient(180deg, #fffaf9 0%, #fffdfc 40%, #f8f3f6 100%)",
-        minHeight: "100vh",
-      }}
-    >
-      <section
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "22px 20px 8px",
-        }}
-      >
-        <nav
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "16px",
-            flexWrap: "wrap",
-            marginBottom: "24px",
-          }}
-        >
-          <div
-            style={{
-              fontWeight: 800,
-              fontSize: "24px",
-              color: "#a0546a",
-              letterSpacing: "-0.5px",
-            }}
-          >
-            schnelleHilfe-ADHS
-          </div>
+    <>
+      <style jsx global>{`
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
 
-          <div
-            style={{
-              display: "flex",
-              gap: "18px",
-              flexWrap: "wrap",
-              fontSize: "15px",
-            }}
-          >
-            <a href="#angebote" style={navLink}>
-              Angebote
-            </a>
-            <a href="#hilfe" style={navLink}>
-              Wobei ich helfe
-            </a>
-            <a href="#uebermich" style={navLink}>
-              Über mich
-            </a>
-            <a href="#kontakt" style={navLink}>
-              Kontakt
-            </a>
-          </div>
-        </nav>
-      </section>
+        html {
+          scroll-behavior: smooth;
+        }
 
-      <section
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "36px 20px 72px",
-        }}
-      >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.15fr 0.85fr",
-            gap: "28px",
-            alignItems: "center",
-          }}
-        >
-          <div>
-            <div
-              style={{
-                display: "inline-block",
-                padding: "10px 16px",
-                borderRadius: "999px",
-                background: "#f5e3e8",
-                color: "#a0546a",
-                fontWeight: 700,
-                fontSize: "14px",
-                marginBottom: "18px",
-              }}
-            >
-              ADHS-Begleitung für Familien & Erwachsene
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: "Inter", Arial, sans-serif;
+          background: linear-gradient(180deg, #fff1f4 0%, #fff 40%, #f2e7f1 100%);
+          color: #3a2f34;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        a {
+          color: inherit;
+        }
+
+        .page-shell {
+          min-height: 100vh;
+        }
+
+        .container {
+          max-width: 1120px;
+          margin: 0 auto;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .topnav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
+          padding-top: 22px;
+          padding-bottom: 14px;
+        }
+
+        .brand {
+          font-weight: 800;
+          font-size: 24px;
+          color: #a0546a;
+          letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 18px;
+          flex-wrap: wrap;
+          font-size: 15px;
+        }
+
+        .nav-links a {
+          text-decoration: none;
+          color: #6d6570;
+          font-weight: 700;
+          transition: color 0.22s ease;
+        }
+
+        .nav-links a:hover {
+          color: #a03c5a;
+        }
+
+        .hero {
+          display: grid;
+          grid-template-columns: 1.12fr 0.88fr;
+          gap: 32px;
+          align-items: center;
+          padding-top: 34px;
+          padding-bottom: 78px;
+        }
+
+        .badge {
+          display: inline-block;
+          padding: 10px 16px;
+          border-radius: 999px;
+          background: #f3dfe3;
+          color: #a14d5d;
+          font-weight: 700;
+          font-size: 14px;
+          margin-bottom: 18px;
+          box-shadow: 0 8px 24px rgba(161, 77, 93, 0.08);
+        }
+
+        .hero-title {
+          font-family: "Playfair Display", serif;
+          font-size: clamp(42px, 7vw, 78px);
+          line-height: 1.03;
+          margin: 0 0 18px;
+          color: #1a1a1a;
+          letter-spacing: -1.7px;
+          max-width: 780px;
+        }
+
+        .hero-subtitle {
+          font-size: clamp(19px, 2.4vw, 28px);
+          line-height: 1.55;
+          max-width: 760px;
+          margin: 0 0 18px;
+          color: #4a434b;
+        }
+
+        .hero-text {
+          font-size: 17px;
+          line-height: 1.85;
+          max-width: 720px;
+          margin: 0 0 30px;
+          color: #675f68;
+        }
+
+        .button-row {
+          display: flex;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-whatsapp-inline {
+          display: inline-block;
+          text-decoration: none;
+          border-radius: 999px;
+          font-weight: 800;
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            background 0.2s ease,
+            color 0.2s ease,
+            border-color 0.2s ease;
+          cursor: pointer;
+        }
+
+        .btn-primary {
+          background: #a03c5a;
+          color: #fff;
+          padding: 15px 24px;
+          box-shadow: 0 16px 30px rgba(160, 60, 90, 0.22);
+        }
+
+        .btn-primary:hover {
+          transform: translateY(-2px);
+          background: #8f314d;
+          box-shadow: 0 20px 34px rgba(160, 60, 90, 0.28);
+        }
+
+        .btn-secondary {
+          background: #fff;
+          color: #a0546a;
+          padding: 15px 24px;
+          border: 1px solid #e6cbd5;
+          box-shadow: 0 10px 24px rgba(100, 70, 95, 0.06);
+        }
+
+        .btn-secondary:hover {
+          transform: translateY(-2px);
+          background: #fff7fa;
+          border-color: #dba5b5;
+          box-shadow: 0 16px 30px rgba(100, 70, 95, 0.1);
+        }
+
+        .hero-card-wrap {
+          min-height: 470px;
+          border-radius: 34px;
+          background: linear-gradient(145deg, #d77796 0%, #b45f8b 50%, #8d6fd6 100%);
+          box-shadow: 0 28px 62px rgba(141, 84, 120, 0.2);
+          padding: 16px;
+        }
+
+        .hero-card-inner {
+          height: 100%;
+          min-height: 438px;
+          border-radius: 26px;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.18);
+          border: 1px solid rgba(255, 255, 255, 0.28);
+          backdrop-filter: blur(2px);
+        }
+
+        .hero-card-inner img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .section {
+          padding-bottom: 82px;
+        }
+
+        .section-intro {
+          margin-bottom: 28px;
+        }
+
+        .section-title {
+          font-family: "Playfair Display", serif;
+          font-size: clamp(34px, 5vw, 54px);
+          margin: 0 0 10px;
+          color: #1a1a1a;
+          letter-spacing: -1px;
+        }
+
+        .section-text {
+          margin: 0;
+          max-width: 760px;
+          line-height: 1.85;
+          color: #655f69;
+          font-size: 17px;
+        }
+
+        .angebote-grid,
+        .kontakt-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 22px;
+        }
+
+        .angebot-card,
+        .kontakt-card {
+          background: #fff;
+          border: 1px solid #ead0d8;
+          border-radius: 28px;
+          padding: 28px;
+          box-shadow: 0 16px 36px rgba(95, 65, 95, 0.08);
+          transition: transform 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .angebot-card:hover,
+        .kontakt-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 22px 46px rgba(143, 85, 115, 0.14);
+        }
+
+        .angebot-badge {
+          display: inline-block;
+          margin-bottom: 14px;
+          padding: 9px 14px;
+          border-radius: 999px;
+          background: #f7e8ee;
+          color: #a0546a;
+          font-weight: 700;
+          font-size: 13px;
+        }
+
+        .angebot-title,
+        .kontakt-title {
+          margin: 0 0 14px;
+          font-size: 22px;
+          color: #1a1a1a;
+          font-weight: 800;
+        }
+
+        .angebot-text,
+        .kontakt-text {
+          margin: 0 0 18px;
+          line-height: 1.8;
+          color: #655f69;
+        }
+
+        .angebot-preis {
+          font-size: 38px;
+          font-weight: 800;
+          color: #a0546a;
+          letter-spacing: -0.5px;
+        }
+
+        .hilfe-box,
+        .about-box {
+          background: linear-gradient(135deg, #fff 0%, #fcf0f4 100%);
+          border: 1px solid #ead0d8;
+          border-radius: 34px;
+          padding: 34px;
+          box-shadow: 0 18px 42px rgba(122, 76, 112, 0.08);
+        }
+
+        .hilfe-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 16px;
+        }
+
+        .hilfe-item {
+          background: #fff;
+          border: 1px solid #efd8e1;
+          border-radius: 20px;
+          padding: 18px;
+          color: #4b4349;
+          font-weight: 600;
+          box-shadow: 0 10px 24px rgba(100, 70, 100, 0.05);
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hilfe-item:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 16px 30px rgba(100, 70, 100, 0.1);
+        }
+
+        .about-grid {
+          display: grid;
+          grid-template-columns: 1fr 320px;
+          gap: 32px;
+          align-items: center;
+        }
+
+        .about-text {
+          margin: 0;
+          line-height: 1.9;
+          color: #5d5662;
+          font-size: 17px;
+        }
+
+        .about-subbox {
+          margin-top: 24px;
+          padding: 22px;
+          background: #fff8fa;
+          border: 1px solid #ead0d8;
+          border-radius: 22px;
+        }
+
+        .about-subtitle {
+          margin: 0 0 10px;
+          color: #1a1a1a;
+          font-size: 22px;
+          font-weight: 800;
+        }
+
+        .about-image img {
+          width: 100%;
+          max-width: 320px;
+          height: 390px;
+          object-fit: cover;
+          border-radius: 26px;
+          display: block;
+          box-shadow: 0 18px 40px rgba(133, 88, 115, 0.14);
+          margin-left: auto;
+        }
+
+        .kontakt-icon {
+          font-size: 26px;
+          margin-bottom: 14px;
+        }
+
+        .kontakt-text {
+          white-space: pre-line;
+          margin: 0;
+        }
+
+        .cta-box {
+          border-radius: 34px;
+          padding: 40px 34px;
+          background: linear-gradient(135deg, #b14c6c 0%, #9b5bb5 60%, #7b6dd8 100%);
+          color: #fff;
+          box-shadow: 0 30px 62px rgba(122, 77, 140, 0.2);
+        }
+
+        .cta-title {
+          margin: 0 0 12px;
+          font-family: "Playfair Display", serif;
+          font-size: clamp(28px, 4vw, 42px);
+          line-height: 1.12;
+        }
+
+        .cta-text {
+          margin: 0 0 22px;
+          max-width: 760px;
+          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.94);
+          font-size: 17px;
+        }
+
+        .btn-whatsapp-inline {
+          background: #fff;
+          color: #9a4f8b;
+          padding: 14px 22px;
+        }
+
+        .btn-whatsapp-inline:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 16px 30px rgba(255, 255, 255, 0.16);
+        }
+
+        .whatsapp-float {
+          position: fixed;
+          right: 18px;
+          bottom: 18px;
+          text-decoration: none;
+          background: #25d366;
+          color: #fff;
+          padding: 14px 18px;
+          border-radius: 999px;
+          font-weight: 700;
+          box-shadow: 0 14px 28px rgba(37, 211, 102, 0.3);
+          z-index: 1000;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .whatsapp-float:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 18px 34px rgba(37, 211, 102, 0.36);
+        }
+
+        @media (max-width: 900px) {
+          .hero,
+          .about-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .hero-card-wrap {
+            min-height: auto;
+          }
+
+          .hero-card-inner {
+            min-height: 360px;
+          }
+
+          .about-image img {
+            margin: 0 auto;
+            max-width: 360px;
+            height: 360px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .container {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+
+          .topnav {
+            padding-top: 18px;
+          }
+
+          .hero {
+            padding-top: 26px;
+            padding-bottom: 56px;
+          }
+
+          .section {
+            padding-bottom: 64px;
+          }
+
+          .hilfe-box,
+          .about-box,
+          .cta-box,
+          .angebot-card,
+          .kontakt-card {
+            padding: 24px;
+          }
+
+          .button-row {
+            flex-direction: column;
+            align-items: stretch;
+          }
+
+          .btn-primary,
+          .btn-secondary,
+          .btn-whatsapp-inline {
+            text-align: center;
+          }
+
+          .nav-links {
+            gap: 12px;
+          }
+
+          .whatsapp-float {
+            right: 14px;
+            bottom: 14px;
+          }
+        }
+      `}</style>
+
+      <main className="page-shell">
+        <section className="container">
+          <nav className="topnav">
+            <div className="brand">schnelleHilfe-ADHS</div>
+
+            <div className="nav-links">
+              <a href="#angebote">Angebote</a>
+              <a href="#hilfe">Wobei ich helfe</a>
+              <a href="#uebermich">Über mich</a>
+              <a href="#kontakt">Kontakt</a>
+            </div>
+          </nav>
+        </section>
+
+        <section className="container">
+          <div className="hero">
+            <div>
+              <div className="badge">
+                ADHS-Begleitung für Familien & Erwachsene
+              </div>
+
+              <h1 className="hero-title">
+                Mehr Ruhe & Klarheit im Familienalltag
+              </h1>
+
+              <p className="hero-subtitle">
+                Denise Schäfer begleitet Eltern und Erwachsene mit klarer,
+                verständlicher und alltagstauglicher Unterstützung.
+              </p>
+
+              <p className="hero-text">
+                Wenn alles gleichzeitig laut wird, helfen keine langen
+                Erklärungen, sondern ruhige Orientierung, konkrete Schritte und
+                schnelle Entlastung.
+              </p>
+
+              <div className="button-row">
+                <a href="#kontakt" className="btn-primary">
+                  Kontakt aufnehmen
+                </a>
+                <a href="#angebote" className="btn-secondary">
+                  Angebote ansehen
+                </a>
+              </div>
             </div>
 
-            <h1
-              style={{
-                fontSize: "clamp(42px, 7vw, 76px)",
-                lineHeight: 1.03,
-                margin: "0 0 18px",
-                color: "#1a1a1a",
-                letterSpacing: "-1.8px",
-                maxWidth: "760px",
-              }}
-            >
-              Mehr Ruhe & Klarheit im Familienalltag
-            </h1>
-
-            <p
-              style={{
-                fontSize: "clamp(19px, 2.4vw, 28px)",
-                lineHeight: 1.5,
-                maxWidth: "760px",
-                margin: "0 0 18px",
-                color: "#4b4650",
-              }}
-            >
-              Denise Schäfer begleitet Eltern und Erwachsene mit klarer,
-              verständlicher und alltagstauglicher Unterstützung.
-            </p>
-
-            <p
-              style={{
-                fontSize: "17px",
-                lineHeight: 1.85,
-                maxWidth: "710px",
-                margin: "0 0 28px",
-                color: "#69636e",
-              }}
-            >
-              Wenn alles gleichzeitig laut wird, helfen keine langen
-              Erklärungen, sondern ruhige Orientierung, konkrete Schritte und
-              schnelle Entlastung.
-            </p>
-
-            <div
-              style={{
-                display: "flex",
-                gap: "14px",
-                flexWrap: "wrap",
-              }}
-            >
-              <a href="#kontakt" style={primaryBtn}>
-                Kontakt aufnehmen
-              </a>
-              <a href="#angebote" style={secondaryBtn}>
-                Angebote ansehen
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <div
-              style={{
-                minHeight: "430px",
-                borderRadius: "34px",
-                background:
-                  "linear-gradient(145deg, #f0c8d4 0%, #dca6be 45%, #c9b5de 100%)",
-                boxShadow: "0 24px 60px rgba(141, 84, 120, 0.16)",
-                padding: "16px",
-              }}
-            >
-              <div
-                style={{
-                  height: "100%",
-                  minHeight: "398px",
-                  borderRadius: "26px",
-                  overflow: "hidden",
-                  background: "rgba(255,255,255,0.22)",
-                  border: "1px solid rgba(255,255,255,0.35)",
-                }}
-              >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: "100%",
-                  }}
-                >
-                  <img
-                    src="/profil.jpg.jfif"
-                    alt="Denise Schäfer"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      display: "block",
-                    }}
-                  />
+            <div>
+              <div className="hero-card-wrap">
+                <div className="hero-card-inner">
+                  <img src="/profil.jpg.jfif" alt="Denise Schäfer" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        id="angebote"
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "0 20px 78px",
-        }}
-      >
-        <div style={sectionIntroWrap}>
-          <h2 style={sectionTitleBlack}>Angebote</h2>
-          <p style={sectionText}>
-            Klar, warm und unkompliziert. Du bekommst keine Theorie-Flut,
-            sondern konkrete Hilfe, die wirklich in deinen Alltag passt.
-          </p>
-        </div>
+        <section id="angebote" className="container section">
+          <div className="section-intro">
+            <h2 className="section-title">Angebote</h2>
+            <p className="section-text">
+              Klar, warm und unkompliziert. Sie bekommen keine Theorie-Flut,
+              sondern konkrete Hilfe, die wirklich in Ihren Alltag passt.
+            </p>
+          </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "24px",
-          }}
-        >
-          {angebote.map((item) => (
-            <div
-              key={item.titel}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-6px)";
-                e.currentTarget.style.boxShadow =
-                  "0 22px 46px rgba(143, 85, 115, 0.14)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow =
-                  "0 14px 34px rgba(143, 85, 115, 0.08)";
-              }}
-              style={{
-                background: "rgba(255,255,255,0.92)",
-                border: "1px solid #f0dfe6",
-                borderRadius: "28px",
-                padding: "28px",
-                boxShadow: "0 14px 34px rgba(143, 85, 115, 0.08)",
-                transition: "all 0.22s ease",
-              }}
-            >
-              <div
-                style={{
-                  display: "inline-block",
-                  marginBottom: "14px",
-                  padding: "9px 14px",
-                  borderRadius: "999px",
-                  background: "#f7e8ee",
-                  color: "#a0546a",
-                  fontWeight: 700,
-                  fontSize: "13px",
-                }}
-              >
-                {item.dauer}
-              </div>
+          <div className="angebote-grid">
+            {angebote.map((item) => (
+              <div key={item.titel} className="angebot-card">
+                <div className="angebot-badge">{item.dauer}</div>
 
-              <h3
-                style={{
-                  margin: "0 0 14px",
-                  fontSize: "22px",
-                  color: "#1a1a1a",
-                }}
-              >
-                {item.titel}
-              </h3>
+                <h3 className="angebot-title">{item.titel}</h3>
 
-              <p
-                style={{
-                  margin: "0 0 18px",
-                  lineHeight: 1.8,
-                  color: "#655f69",
-                  minHeight: "112px",
-                }}
-              >
-                {item.text}
-              </p>
+                <p className="angebot-text">{item.text}</p>
 
-              <div
-                style={{
-                  fontSize: "38px",
-                  fontWeight: 800,
-                  color: "#a0546a",
-                  letterSpacing: "-0.5px",
-                }}
-              >
-                {item.preis}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="hilfe"
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "0 20px 84px",
-        }}
-      >
-        <div
-          style={{
-            background: "linear-gradient(135deg, #fff 0%, #fdf4f8 100%)",
-            border: "1px solid #f0dde5",
-            borderRadius: "34px",
-            padding: "34px",
-            boxShadow: "0 18px 42px rgba(122, 76, 112, 0.08)",
-          }}
-        >
-          <h2 style={{ ...sectionTitleBlack, marginBottom: "18px" }}>
-            Wobei ich helfe
-          </h2>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: "16px",
-            }}
-          >
-            {hilfen.map((punkt) => (
-              <div
-                key={punkt}
-                style={{
-                  background: "#fff",
-                  border: "1px solid #f2e3e8",
-                  borderRadius: "20px",
-                  padding: "18px",
-                  color: "#4a4349",
-                  fontWeight: 600,
-                  boxShadow: "0 10px 24px rgba(100, 70, 100, 0.05)",
-                }}
-              >
-                ✨ {punkt}
+                <div className="angebot-preis">{item.preis}</div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        id="uebermich"
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "0 20px 84px",
-        }}
-      >
-        <div
-          style={{
-            background: "rgba(255,255,255,0.9)",
-            border: "1px solid #f2e1e8",
-            borderRadius: "34px",
-            padding: "36px",
-            boxShadow: "0 18px 42px rgba(120, 82, 112, 0.08)",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 320px",
-              gap: "32px",
-              alignItems: "center",
-            }}
-          >
-            <div>
-              <h2 style={{ ...sectionTitleBlack, marginBottom: "14px" }}>
-                Über mich
-              </h2>
-              <p
-                style={{
-                  margin: 0,
-                  lineHeight: 1.9,
-                  color: "#5d5662",
-                  fontSize: "17px",
-                }}
-              >
-                Ich begleite Eltern und Erwachsene im Alltag. Mir ist wichtig,
-                dass du dich verstanden fühlst und schnell konkrete Hilfe
-                bekommst – ruhig, klar und ohne unnötigen Druck. Du musst nicht
-                erst alles perfekt erklären können. Wir schauen gemeinsam, was
-                gerade hilft.
-              </p>
-            </div>
+        <section id="hilfe" className="container section">
+          <div className="hilfe-box">
+            <h2 className="section-title" style={{ marginBottom: 18 }}>
+              Wobei ich helfe
+            </h2>
 
-            <div
-              style={{
-                width: "100%",
-              }}
-            >
-              <img
-                src="/profil.jpg.jfif"
-                alt="Denise Schäfer"
-                style={{
-                  width: "100%",
-                  maxWidth: "320px",
-                  height: "380px",
-                  objectFit: "cover",
-                  borderRadius: "26px",
-                  display: "block",
-                  boxShadow: "0 18px 40px rgba(133, 88, 115, 0.14)",
-                  marginLeft: "auto",
-                }}
-              />
+            <div className="hilfe-grid">
+              {hilfen.map((punkt) => (
+                <div key={punkt} className="hilfe-item">
+                  ✨ {punkt}
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section
-        id="kontakt"
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "0 20px 36px",
-        }}
-      >
-        <div style={sectionIntroWrap}>
-          <h2 style={sectionTitleBlack}>Kontakt</h2>
-          <p style={sectionText}>
-            Du kannst dich gern melden, wenn du Fragen hast oder ein Gespräch
-            vereinbaren möchtest.
-          </p>
-        </div>
+        <section id="uebermich" className="container section">
+          <div className="about-box">
+            <div className="about-grid">
+              <div>
+                <h2 className="section-title" style={{ marginBottom: 14 }}>
+                  Über mich
+                </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "22px",
-          }}
-        >
-          {kontaktkarten.map((item) => (
-            <div
-              key={item.titel}
-              style={{
-                background: "#fff",
-                borderRadius: "28px",
-                border: "1px solid #f0e0e6",
-                padding: "28px",
-                boxShadow: "0 16px 36px rgba(95, 65, 95, 0.08)",
-              }}
-            >
-              <div style={{ fontSize: "26px", marginBottom: "14px" }}>
-                {item.icon}
+                <p className="about-text">
+                  Ich bin Denise Schäfer und begleite Groß und Klein im Alltag
+                  mit ADHS. Mir ist wichtig, dass Sie sich verstanden fühlen und
+                  schnell konkrete Hilfe bekommen – ohne komplizierte Theorien.
+                </p>
+
+                <div className="about-subbox">
+                  <h3 className="about-subtitle">
+                    Meine Erfahrungen & Qualifikationen
+                  </h3>
+                  <p className="about-text">
+                    Ich bin gelernte Kinderpflegerin und ADHS-Coach und habe
+                    mich gezielt in diesem Bereich weitergebildet. Mein Wissen
+                    verbinde ich mit viel Erfahrung aus dem Alltag – genau das
+                    hilft wirklich ins Handeln zu kommen.
+                  </p>
+                </div>
               </div>
-              <h3
-                style={{
-                  margin: "0 0 12px",
-                  fontSize: "22px",
-                  color: "#1a1a1a",
-                }}
-              >
-                {item.titel}
-              </h3>
-              <p
-                style={{
-                  margin: 0,
-                  lineHeight: 1.8,
-                  color: "#5d5762",
-                  whiteSpace: "pre-line",
-                }}
-              >
-                {item.inhalt}
-              </p>
+
+              <div className="about-image">
+                <img src="/profil.jpg.jfif" alt="Denise Schäfer" />
+              </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <section
-        style={{
-          maxWidth: "1100px",
-          margin: "0 auto",
-          padding: "34px 20px 100px",
-        }}
-      >
-        <div
-          style={{
-            borderRadius: "34px",
-            padding: "38px 34px",
-            background:
-              "linear-gradient(135deg, #c97e97 0%, #b26a97 55%, #8f7cc8 100%)",
-            color: "#fff",
-            boxShadow: "0 28px 60px rgba(122, 77, 140, 0.18)",
-          }}
+        <section id="kontakt" className="container" style={{ paddingBottom: 36 }}>
+          <div className="section-intro">
+            <h2 className="section-title">Kontakt</h2>
+            <p className="section-text">
+              Sie können sich gern melden, wenn Sie Fragen haben oder ein
+              Gespräch vereinbaren möchten.
+            </p>
+          </div>
+
+          <div className="kontakt-grid">
+            {kontaktkarten.map((item) => (
+              <div key={item.titel} className="kontakt-card">
+                <div className="kontakt-icon">{item.icon}</div>
+                <h3 className="kontakt-title">{item.titel}</h3>
+                <p className="kontakt-text">{item.inhalt}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="container" style={{ paddingTop: 34, paddingBottom: 100 }}>
+          <div className="cta-box">
+            <h2 className="cta-title">Sie müssen da nicht allein durch.</h2>
+
+            <p className="cta-text">
+              Wenn Sie sich mehr Ruhe, Klarheit und konkrete Unterstützung für
+              Ihren Alltag wünschen, melden Sie sich gern bei mir.
+            </p>
+
+            <a
+              href="https://wa.me/491774670001"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-whatsapp-inline"
+            >
+              Jetzt per WhatsApp schreiben
+            </a>
+          </div>
+        </section>
+
+        <a
+          href="https://wa.me/491774670001"
+          target="_blank"
+          rel="noreferrer"
+          className="whatsapp-float"
         >
-          <h2
-            style={{
-              margin: "0 0 12px",
-              fontSize: "clamp(28px, 4vw, 42px)",
-              lineHeight: 1.1,
-            }}
-          >
-            Du musst da nicht allein durch.
-          </h2>
-
-          <p
-            style={{
-              margin: "0 0 22px",
-              maxWidth: "760px",
-              lineHeight: 1.8,
-              color: "rgba(255,255,255,0.94)",
-              fontSize: "17px",
-            }}
-          >
-            Wenn du dir mehr Ruhe, Klarheit und konkrete Unterstützung für euren
-            Alltag wünschst, melde dich gern bei mir.
-          </p>
-
-          <a
-            href="https://wa.me/491774670001"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: "inline-block",
-              textDecoration: "none",
-              background: "#fff",
-              color: "#9a4f8b",
-              padding: "14px 22px",
-              borderRadius: "999px",
-              fontWeight: 800,
-            }}
-          >
-            Jetzt per WhatsApp schreiben
-          </a>
-        </div>
-      </section>
-
-      <a
-        href="https://wa.me/491774670001"
-        target="_blank"
-        rel="noreferrer"
-        style={{
-          position: "fixed",
-          right: "18px",
-          bottom: "18px",
-          textDecoration: "none",
-          background: "#25D366",
-          color: "#fff",
-          padding: "14px 18px",
-          borderRadius: "999px",
-          fontWeight: 700,
-          boxShadow: "0 14px 28px rgba(37,211,102,0.3)",
-          zIndex: 1000,
-        }}
-      >
-        WhatsApp
-      </a>
-    </main>
+          WhatsApp
+        </a>
+      </main>
+    </>
   );
 }
-
-const navLink = {
-  textDecoration: "none",
-  color: "#6d6570",
-  fontWeight: 700,
-};
-
-const primaryBtn = {
-  textDecoration: "none",
-  background: "#b85c6b",
-  color: "#fff",
-  padding: "15px 24px",
-  borderRadius: "999px",
-  fontWeight: 800,
-  boxShadow: "0 14px 28px rgba(184,92,107,0.2)",
-};
-
-const secondaryBtn = {
-  textDecoration: "none",
-  background: "#fff",
-  color: "#a0546a",
-  padding: "15px 24px",
-  borderRadius: "999px",
-  fontWeight: 800,
-  border: "1px solid #ecd9df",
-};
-
-const sectionIntroWrap = {
-  marginBottom: "28px",
-};
-
-const sectionTitleBlack = {
-  fontSize: "clamp(34px, 5vw, 54px)",
-  margin: "0 0 10px",
-  color: "#1a1a1a",
-  letterSpacing: "-1px",
-};
-
-const sectionText = {
-  margin: 0,
-  maxWidth: "760px",
-  lineHeight: 1.8,
-  color: "#655f69",
-  fontSize: "17px",
-};
