@@ -3,28 +3,30 @@ export default function Home() {
     <main
       style={{
         fontFamily: "Arial, sans-serif",
-        color: "#2a2a2a",
+        color: "#3a3a3a",
         background:
-          "linear-gradient(180deg, #fffaf7 0%, #fff 35%, #f9f4ff 100%)",
+          "linear-gradient(180deg, #fff6f7 0%, #fffaf8 38%, #f7f4ff 100%)",
+        minHeight: "100vh",
       }}
     >
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1120px",
           margin: "0 auto",
-          padding: "72px 24px 56px",
+          padding: "80px 24px 56px",
         }}
       >
         <div
           style={{
             display: "inline-block",
-            padding: "8px 14px",
+            padding: "9px 16px",
             borderRadius: "999px",
-            background: "#f7dfe8",
-            color: "#a2345b",
+            background: "#f3dfe3",
+            color: "#a14d5d",
             fontSize: "14px",
             fontWeight: 700,
             marginBottom: "18px",
+            boxShadow: "0 6px 18px rgba(161,77,93,0.08)",
           }}
         >
           ADHS-Begleitung für Familien & Erwachsene
@@ -32,11 +34,12 @@ export default function Home() {
 
         <h1
           style={{
-            fontSize: "clamp(34px, 6vw, 64px)",
-            lineHeight: 1.05,
-            margin: "0 0 18px",
-            color: "#8f234a",
-            maxWidth: "760px",
+            fontSize: "clamp(38px, 7vw, 72px)",
+            lineHeight: 1.02,
+            margin: "0 0 20px",
+            color: "#a14d5d",
+            letterSpacing: "-1px",
+            maxWidth: "820px",
           }}
         >
           schnelleHilfe-ADHS
@@ -44,10 +47,10 @@ export default function Home() {
 
         <p
           style={{
-            fontSize: "clamp(18px, 2.8vw, 24px)",
-            lineHeight: 1.5,
-            maxWidth: "760px",
-            margin: "0 0 12px",
+            fontSize: "clamp(20px, 2.6vw, 28px)",
+            lineHeight: 1.45,
+            maxWidth: "850px",
+            margin: "0 0 16px",
             color: "#4f4a54",
           }}
         >
@@ -57,28 +60,35 @@ export default function Home() {
 
         <p
           style={{
-            fontSize: "17px",
-            lineHeight: 1.7,
-            maxWidth: "720px",
+            fontSize: "18px",
+            lineHeight: 1.8,
+            maxWidth: "760px",
             margin: "0",
-            color: "#6b6470",
+            color: "#655e68",
           }}
         >
           Wenn alles gleichzeitig laut wird, helfen keine langen Erklärungen,
-          sondern schnelle, verständliche und alltagstaugliche Lösungen.
+          sondern verständliche, liebevolle und alltagstaugliche Lösungen.
         </p>
 
-        <div style={{ marginTop: "28px", display: "flex", gap: "14px", flexWrap: "wrap" }}>
+        <div
+          style={{
+            marginTop: "30px",
+            display: "flex",
+            gap: "14px",
+            flexWrap: "wrap",
+          }}
+        >
           <a
             href="#kontakt"
             style={{
               textDecoration: "none",
-              background: "#8f234a",
+              background: "#b85c6b",
               color: "#fff",
               padding: "14px 22px",
-              borderRadius: "14px",
+              borderRadius: "999px",
               fontWeight: 700,
-              boxShadow: "0 10px 24px rgba(143,35,74,0.22)",
+              boxShadow: "0 14px 30px rgba(184,92,107,0.22)",
             }}
           >
             Kontakt aufnehmen
@@ -89,11 +99,12 @@ export default function Home() {
             style={{
               textDecoration: "none",
               background: "#fff",
-              color: "#8f234a",
+              color: "#a14d5d",
               padding: "14px 22px",
-              borderRadius: "14px",
+              borderRadius: "999px",
               fontWeight: 700,
-              border: "1px solid #ead6df",
+              border: "1px solid #edd8df",
+              boxShadow: "0 8px 20px rgba(120,80,100,0.05)",
             }}
           >
             Angebote ansehen
@@ -103,16 +114,16 @@ export default function Home() {
 
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1120px",
           margin: "0 auto",
-          padding: "0 24px 64px",
+          padding: "0 24px 70px",
         }}
       >
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "18px",
+            gap: "20px",
           }}
         >
           {[
@@ -131,18 +142,42 @@ export default function Home() {
           ].map((item) => (
             <div
               key={item.title}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow =
+                  "0 16px 40px rgba(160, 90, 110, 0.12)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 12px 30px rgba(160, 90, 110, 0.08)";
+              }}
               style={{
-                background: "rgba(255,255,255,0.9)",
-                border: "1px solid #f0e5eb",
-                borderRadius: "22px",
-                padding: "22px",
-                boxShadow: "0 10px 24px rgba(80,50,90,0.06)",
+                background: "#ffffff",
+                border: "1px solid #f3dfe3",
+                borderRadius: "18px",
+                padding: "24px",
+                boxShadow: "0 12px 30px rgba(160, 90, 110, 0.08)",
+                transition: "transform 0.2s ease, box-shadow 0.2s ease",
               }}
             >
-              <h3 style={{ margin: "0 0 10px", fontSize: "20px", color: "#7f2143" }}>
+              <h3
+                style={{
+                  margin: "0 0 10px",
+                  fontSize: "22px",
+                  color: "#a14d5d",
+                }}
+              >
                 {item.title}
               </h3>
-              <p style={{ margin: 0, lineHeight: 1.65, color: "#5d5662" }}>
+              <p
+                style={{
+                  margin: 0,
+                  lineHeight: 1.7,
+                  color: "#5d5662",
+                  fontSize: "16px",
+                }}
+              >
                 {item.text}
               </p>
             </div>
@@ -153,31 +188,32 @@ export default function Home() {
       <section
         id="angebote"
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1120px",
           margin: "0 auto",
-          padding: "12px 24px 70px",
+          padding: "10px 24px 80px",
         }}
       >
         <h2
           style={{
-            fontSize: "clamp(28px, 4vw, 42px)",
+            fontSize: "clamp(30px, 4vw, 46px)",
             margin: "0 0 12px",
-            color: "#8f234a",
+            color: "#a14d5d",
           }}
         >
           Angebote
         </h2>
+
         <p
           style={{
-            maxWidth: "720px",
-            margin: "0 0 28px",
-            lineHeight: 1.7,
-            color: "#625b68",
+            maxWidth: "760px",
+            margin: "0 0 30px",
+            lineHeight: 1.8,
+            color: "#655e68",
             fontSize: "17px",
           }}
         >
-          Klar, warm und unkompliziert. Du bekommst keine Theorie-Flut, sondern
-          konkrete Hilfe, die zu deiner Situation passt.
+          Klar, warm und unkompliziert. Du bekommst keine Theorie-Flut,
+          sondern konkrete Hilfe, die wirklich in deinen Alltag passt.
         </p>
 
         <div
@@ -212,21 +248,21 @@ export default function Home() {
               style={{
                 background: "#fff",
                 borderRadius: "24px",
-                padding: "26px",
-                border: "1px solid #efe3ea",
-                boxShadow: "0 14px 32px rgba(89,48,82,0.08)",
+                padding: "28px",
+                border: "1px solid #f1dfe7",
+                boxShadow: "0 16px 36px rgba(101,59,97,0.08)",
               }}
             >
               <div
                 style={{
                   display: "inline-block",
-                  padding: "7px 12px",
+                  padding: "8px 13px",
                   borderRadius: "999px",
-                  background: "#faedf2",
-                  color: "#9c3059",
+                  background: "#fbecf1",
+                  color: "#a14d5d",
                   fontSize: "13px",
                   fontWeight: 700,
-                  marginBottom: "14px",
+                  marginBottom: "15px",
                 }}
               >
                 {item.duration}
@@ -234,9 +270,9 @@ export default function Home() {
 
               <h3
                 style={{
-                  margin: "0 0 10px",
-                  fontSize: "24px",
-                  color: "#7f2143",
+                  margin: "0 0 12px",
+                  fontSize: "25px",
+                  color: "#a14d5d",
                 }}
               >
                 {item.title}
@@ -244,10 +280,10 @@ export default function Home() {
 
               <p
                 style={{
-                  margin: "0 0 16px",
-                  lineHeight: 1.7,
+                  margin: "0 0 18px",
+                  lineHeight: 1.75,
                   color: "#5e5863",
-                  minHeight: "78px",
+                  minHeight: "85px",
                 }}
               >
                 {item.text}
@@ -255,9 +291,9 @@ export default function Home() {
 
               <div
                 style={{
-                  fontSize: "28px",
+                  fontSize: "30px",
                   fontWeight: 800,
-                  color: "#8f234a",
+                  color: "#b85c6b",
                 }}
               >
                 {item.price}
@@ -269,25 +305,25 @@ export default function Home() {
 
       <section
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1120px",
           margin: "0 auto",
-          padding: "0 24px 72px",
+          padding: "0 24px 80px",
         }}
       >
         <div
           style={{
-            background: "linear-gradient(135deg, #fff 0%, #fdf4f8 100%)",
-            border: "1px solid #f0dee7",
+            background: "linear-gradient(135deg, #fff 0%, #fdf2f6 100%)",
+            border: "1px solid #f0dde5",
             borderRadius: "28px",
-            padding: "30px",
+            padding: "34px",
             boxShadow: "0 16px 36px rgba(101,59,97,0.08)",
           }}
         >
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
-              margin: "0 0 14px",
-              color: "#8f234a",
+              fontSize: "clamp(30px, 4vw, 44px)",
+              margin: "0 0 16px",
+              color: "#a14d5d",
             }}
           >
             Über mich
@@ -296,15 +332,16 @@ export default function Home() {
           <p
             style={{
               margin: 0,
-              maxWidth: "840px",
-              lineHeight: 1.8,
+              maxWidth: "860px",
+              lineHeight: 1.85,
               color: "#5f5965",
               fontSize: "17px",
             }}
           >
             Ich begleite Eltern und Erwachsene im Alltag. Mir ist wichtig, dass
             du dich verstanden fühlst und schnell konkrete Hilfe bekommst –
-            ruhig, klar und ohne unnötigen Druck.
+            ruhig, klar und ohne unnötigen Druck. Du musst nicht erst alles
+            perfekt erklären können. Wir schauen gemeinsam, was gerade hilft.
           </p>
         </div>
       </section>
@@ -312,25 +349,25 @@ export default function Home() {
       <section
         id="kontakt"
         style={{
-          maxWidth: "1100px",
+          maxWidth: "1120px",
           margin: "0 auto",
-          padding: "0 24px 90px",
+          padding: "0 24px 100px",
         }}
       >
         <div
           style={{
             background: "#fff",
             borderRadius: "28px",
-            padding: "30px",
-            border: "1px solid #efe4ea",
+            padding: "34px",
+            border: "1px solid #efe1e8",
             boxShadow: "0 16px 36px rgba(90,56,88,0.08)",
           }}
         >
           <h2
             style={{
-              fontSize: "clamp(28px, 4vw, 40px)",
+              fontSize: "clamp(30px, 4vw, 44px)",
               margin: "0 0 14px",
-              color: "#8f234a",
+              color: "#a14d5d",
             }}
           >
             Kontakt
@@ -339,8 +376,9 @@ export default function Home() {
           <p
             style={{
               margin: "0 0 22px",
-              lineHeight: 1.7,
+              lineHeight: 1.75,
               color: "#635c68",
+              fontSize: "17px",
             }}
           >
             Du kannst dich gern melden, wenn du Fragen hast oder ein Gespräch
@@ -352,7 +390,8 @@ export default function Home() {
               display: "grid",
               gap: "14px",
               fontSize: "17px",
-              lineHeight: 1.7,
+              lineHeight: 1.75,
+              color: "#4f4954",
             }}
           >
             <div>📍 Krämerbergstr. 60, 66578 Schiffweiler</div>
