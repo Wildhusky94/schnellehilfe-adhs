@@ -634,7 +634,7 @@ export default function Home() {
         }
       `}</style>
 
-      <main className={page-shell ${loaded ? "loaded" : ""}}>
+      <main className={`page-shell ${loaded ? "loaded" : ""}`}>
         <section className="container reveal delay-1">
           <nav className="topnav">
             <div className="brand">schnelleHilfe-ADHS</div>
@@ -657,3 +657,172 @@ export default function Home() {
 
               <h1 className="hero-title">
                 Mehr Ruhe & Klarheit im Familienalltag
+              </h1>
+
+              <p className="hero-subtitle">
+                Ich begleite Eltern und Erwachsene mit klarer, verständlicher und
+                alltagstauglicher Unterstützung.
+              </p>
+
+              <p className="hero-text">
+                Wenn alles gleichzeitig laut wird, helfen keine langen
+                Erklärungen, sondern ruhige Orientierung, konkrete Schritte und
+                schnelle Entlastung.
+              </p>
+
+              <div className="button-row">
+                <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
+                  Termin anfragen
+                </a>
+                <a href="#angebote" className="btn-secondary">
+                  Angebote ansehen
+                </a>
+              </div>
+            </div>
+
+            <div className="hero-logo-wrap">
+              <div className="hero-logo-ring">
+                <img
+                  src="/logo.png"
+                  alt="Logo schnelleHilfe-ADHS"
+                  className="hero-logo"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="angebote" className="container section reveal delay-3">
+          <div className="section-intro">
+            <h2 className="section-title">Angebote</h2>
+            <p className="section-text">
+              Klar, warm und unkompliziert. Sie bekommen keine Theorie-Flut,
+              sondern konkrete Hilfe, die wirklich in Ihren Alltag passt.
+            </p>
+          </div>
+
+          <div className="angebote-grid">
+            {angebote.map((item) => (
+              <div key={item.titel} className="angebot-card">
+                <div className="angebot-badge">{item.dauer}</div>
+                <h3 className="angebot-title">{item.titel}</h3>
+                <p className="angebot-text">{item.text}</p>
+                <div className="angebot-preis">{item.preis}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="hausbesuche-box">
+            <h3 className="angebot-title" style={{ marginBottom: 10 }}>
+              Hausbesuche
+            </h3>
+            <p className="angebot-text" style={{ marginBottom: 0 }}>
+              Im Umkreis von 10 km inklusive.
+              <br />
+              Darüber hinaus wird eine Fahrtkostenpauschale von 0,40 € / km berechnet.
+            </p>
+          </div>
+        </section>
+
+        <section id="hilfe" className="container section reveal delay-4">
+          <div className="hilfe-box">
+            <h2 className="section-title" style={{ marginBottom: 18 }}>
+              Wobei ich helfe
+            </h2>
+
+            <div className="hilfe-grid">
+              {hilfen.map((punkt) => (
+                <div key={punkt} className="hilfe-item">
+                  ✨ {punkt}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="uebermich" className="container section reveal delay-5">
+          <div className="about-box">
+            <div className="about-grid">
+              <div>
+                <h2 className="section-title" style={{ marginBottom: 14 }}>
+                  Über mich
+                </h2>
+
+                <p className="about-text">
+                  Ich bin Denise Schäfer und begleite groß und klein im Alltag
+                  mit ADHS. Mir ist wichtig, dass Sie sich verstanden fühlen und
+                  schnell konkrete Hilfe bekommen - ohne komplizierte Theorien.
+                </p>
+
+                <div className="about-subbox">
+                  <h3 className="about-subtitle">
+                    Meine Erfahrungen & Qualifikationen
+                  </h3>
+                  <p className="about-text">
+                    Ich bin gelernte Kinderpflegerin und ADHS-Coach und habe
+                    mich gezielt in diesem Bereich weitergebildet. Mein Wissen
+                    verbinde ich mit viel Erfahrung aus dem Alltag - genau das
+                    hilft wirklich ins Handeln zu kommen.
+                  </p>
+                </div>
+              </div>
+
+              <div className="about-image">
+                <img src="/profil.jpg.jfif" alt="Denise Schäfer" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="kontakt" className="container reveal delay-5" style={{ paddingBottom: 36 }}>
+          <div className="section-intro">
+            <h2 className="section-title">Kontakt</h2>
+            <p className="section-text">
+              Sie können sich gern melden, wenn Sie Fragen haben oder ein
+              Gespräch vereinbaren möchten.
+            </p>
+          </div>
+
+          <div className="kontakt-grid">
+            {kontaktkarten.map((item) => (
+              <div key={item.titel} className="kontakt-card">
+                <div className="kontakt-icon">{item.icon}</div>
+                <h3 className="kontakt-title">{item.titel}</h3>
+                <p className="kontakt-text">{item.inhalt}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="container reveal delay-5" style={{ paddingTop: 34, paddingBottom: 100 }}>
+          <div className="cta-box">
+            <h2 className="cta-title">Sie müssen da nicht allein durch.</h2>
+
+            <p className="cta-text">
+              Wenn Sie sich mehr Ruhe, Klarheit und konkrete Unterstützung für
+              Ihren Alltag wünschen, melden Sie sich gern bei mir.
+            </p>
+
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-whatsapp-inline"
+            >
+              Jetzt per WhatsApp schreiben
+            </a>
+          </div>
+        </section>
+
+        <a
+          href={whatsappLink}
+          target="_blank"
+          rel="noreferrer"
+          className="whatsapp-float"
+        >
+          WhatsApp
+        </a>
+      </main>
+    </>
+  );
+}
