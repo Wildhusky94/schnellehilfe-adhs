@@ -656,19 +656,13 @@ export default function Home() {
               </div>
 
               <h1 className="hero-title">
-                Mehr Ruhe & Klarheit im Familienalltag
+                ADHS Coaching im Saarland – Mehr Ruhe & Klarheit im Familienalltag
               </h1>
 
+              
               <p className="hero-subtitle">
-                Ich begleite Eltern und Erwachsene mit klarer, verständlicher und
-                alltagstauglicher Unterstützung.
-              </p>
-
-              <p className="hero-text">
-                Wenn alles gleichzeitig laut wird, helfen keine langen
-                Erklärungen, sondern ruhige Orientierung, konkrete Schritte und
-                schnelle Entlastung.
-              </p>
+Ich unterstütze Erwachsene und Kinder mit ADHS im Saarland dabei, mehr Ruhe, Struktur und Klarheit in ihren Alltag zu bringen – mit klaren, alltagstauglichen Lösungen, die wirklich funktionieren.
+</p>
 
               <div className="button-row">
                 <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
