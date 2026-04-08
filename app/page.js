@@ -18,7 +18,7 @@ export default function Home() {
       titel: "Akuthilfe",
       dauer: "flexibel",
       preis: "nach Absprache",
-      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist und Sie sofort Entlastung brauchen.",
+      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist. Bei Absprache auch online möglich (z.B. Zoom).",
     },
   ];
 
@@ -74,6 +74,18 @@ export default function Home() {
           color: inherit;
         }
 
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
         .page-shell {
           min-height: 100vh;
         }
@@ -98,8 +110,14 @@ export default function Home() {
         .brand {
           font-weight: 800;
           font-size: 24px;
-          color: #a0546a;
           letter-spacing: -0.5px;
+          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 7s ease infinite;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
         }
 
         .nav-links {
@@ -117,7 +135,7 @@ export default function Home() {
         }
 
         .nav-links a:hover {
-          color: #a03c5a;
+          color: #6a46ff;
         }
 
         .hero {
@@ -134,7 +152,7 @@ export default function Home() {
           padding: 10px 16px;
           border-radius: 999px;
           background: #f3dfe3;
-          color: #a14d5d;
+          color: #7a5f69;
           font-weight: 700;
           font-size: 14px;
           margin-bottom: 18px;
@@ -190,38 +208,41 @@ export default function Home() {
         }
 
         .btn-primary {
-          background: #a03c5a;
+          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 7s ease infinite;
           color: #fff;
           padding: 15px 24px;
-          box-shadow: 0 16px 30px rgba(160, 60, 90, 0.22);
+          box-shadow: 0 16px 30px rgba(103, 76, 255, 0.24);
         }
 
         .btn-primary:hover {
           transform: translateY(-2px);
-          background: #8f314d;
-          box-shadow: 0 20px 34px rgba(160, 60, 90, 0.28);
+          box-shadow: 0 20px 34px rgba(103, 76, 255, 0.3);
         }
 
         .btn-secondary {
           background: #fff;
-          color: #a0546a;
+          color: #6c53d8;
           padding: 15px 24px;
-          border: 1px solid #e6cbd5;
+          border: 1px solid #d9d0ff;
           box-shadow: 0 10px 24px rgba(100, 70, 95, 0.06);
         }
 
         .btn-secondary:hover {
           transform: translateY(-2px);
-          background: #fff7fa;
-          border-color: #dba5b5;
+          background: #faf8ff;
+          border-color: #b39dff;
           box-shadow: 0 16px 30px rgba(100, 70, 95, 0.1);
         }
 
         .hero-card-wrap {
           min-height: 470px;
           border-radius: 34px;
-          background: linear-gradient(145deg, #d77796 0%, #b45f8b 50%, #8d6fd6 100%);
-          box-shadow: 0 28px 62px rgba(141, 84, 120, 0.2);
+          background: linear-gradient(145deg, #355cff 0%, #7a4cff 50%, #c347d9 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 8s ease infinite;
+          box-shadow: 0 28px 62px rgba(102, 84, 190, 0.22);
           padding: 16px;
         }
 
@@ -230,16 +251,22 @@ export default function Home() {
           min-height: 438px;
           border-radius: 26px;
           overflow: hidden;
-          background: rgba(255, 255, 255, 0.18);
+          background: rgba(255, 255, 255, 0.16);
           border: 1px solid rgba(255, 255, 255, 0.28);
           backdrop-filter: blur(2px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
         }
 
         .hero-card-inner img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          max-width: 360px;
+          object-fit: contain;
           display: block;
+          filter: drop-shadow(0 14px 30px rgba(60, 30, 120, 0.2));
         }
 
         .section {
@@ -294,10 +321,13 @@ export default function Home() {
           margin-bottom: 14px;
           padding: 9px 14px;
           border-radius: 999px;
-          background: #f7e8ee;
-          color: #a0546a;
+          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 7s ease infinite;
+          color: #fff;
           font-weight: 700;
           font-size: 13px;
+          box-shadow: 0 10px 22px rgba(103, 76, 255, 0.18);
         }
 
         .angebot-title,
@@ -318,8 +348,14 @@ export default function Home() {
         .angebot-preis {
           font-size: 38px;
           font-weight: 800;
-          color: #a0546a;
           letter-spacing: -0.5px;
+          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 7s ease infinite;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
         }
 
         .hilfe-box,
@@ -385,8 +421,9 @@ export default function Home() {
         .about-image img {
           width: 100%;
           max-width: 320px;
-          height: 390px;
+          height: 430px;
           object-fit: cover;
+          object-position: center top;
           border-radius: 26px;
           display: block;
           box-shadow: 0 18px 40px rgba(133, 88, 115, 0.14);
@@ -406,9 +443,11 @@ export default function Home() {
         .cta-box {
           border-radius: 34px;
           padding: 40px 34px;
-          background: linear-gradient(135deg, #b14c6c 0%, #9b5bb5 60%, #7b6dd8 100%);
+          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
+          background-size: 200% 200%;
+          animation: gradientShift 8s ease infinite;
           color: #fff;
-          box-shadow: 0 30px 62px rgba(122, 77, 140, 0.2);
+          box-shadow: 0 30px 62px rgba(98, 77, 190, 0.24);
         }
 
         .cta-title {
@@ -428,7 +467,7 @@ export default function Home() {
 
         .btn-whatsapp-inline {
           background: #fff;
-          color: #9a4f8b;
+          color: #684eff;
           padding: 14px 22px;
         }
 
@@ -468,13 +507,17 @@ export default function Home() {
           }
 
           .hero-card-inner {
-            min-height: 360px;
+            min-height: 340px;
+          }
+
+          .hero-card-inner img {
+            max-width: 280px;
           }
 
           .about-image img {
             margin: 0 auto;
             max-width: 360px;
-            height: 360px;
+            height: 420px;
           }
         }
 
@@ -553,8 +596,8 @@ export default function Home() {
               </h1>
 
               <p className="hero-subtitle">
-                Denise Schäfer begleitet Eltern und Erwachsene mit klarer,
-                verständlicher und alltagstauglicher Unterstützung.
+                Ich begleite Eltern und Erwachsene mit klarer, verständlicher und
+                alltagstauglicher Unterstützung.
               </p>
 
               <p className="hero-text">
@@ -576,7 +619,7 @@ export default function Home() {
             <div>
               <div className="hero-card-wrap">
                 <div className="hero-card-inner">
-                  <img src="/profil.jpg.jfif" alt="Denise Schäfer" />
+                  <img src="/logo.png" alt="Logo schnelleHilfe-ADHS" />
                 </div>
               </div>
             </div>
