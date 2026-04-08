@@ -1,6 +1,15 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoaded(true), 180);
+    return () => clearTimeout(timer);
+  }, []);
+
   const angebote = [
     {
       titel: "Erstgespräch",
@@ -18,7 +27,7 @@ export default function Home() {
       titel: "Akuthilfe",
       dauer: "flexibel",
       preis: "nach Absprache",
-      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist. Bei Absprache auch online möglich (z.B. Zoom).",
+      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist. Auf Wunsch auch unkompliziert online möglich (z.B. Zoom).",
     },
   ];
 
@@ -49,6 +58,9 @@ export default function Home() {
     },
   ];
 
+  const whatsappLink =
+    "https://wa.me/491774670001?text=Hallo%20Denise,%20ich%20wei%C3%9F%20gerade%20nicht%20mehr%20so%20richtig%20weiter%20und%20w%C3%BCrde%20mir%20Unterst%C3%BCtzung%20w%C3%BCnschen.%20K%C3%B6nnen%20wir%20ein%20Erstgespr%C3%A4ch%20vereinbaren%3F";
+
   return (
     <>
       <style jsx global>{`
@@ -62,7 +74,7 @@ export default function Home() {
           margin: 0;
           padding: 0;
           font-family: "Inter", Arial, sans-serif;
-          background: linear-gradient(180deg, #fff1f4 0%, #fff 40%, #f2e7f1 100%);
+          background: linear-gradient(180deg, #fff2f6 0%, #fff 40%, #f7edf8 100%);
           color: #3a2f34;
         }
 
@@ -86,8 +98,27 @@ export default function Home() {
           }
         }
 
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(26px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         .page-shell {
           min-height: 100vh;
+          opacity: 0;
+          transform: translateY(18px);
+          transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .page-shell.loaded {
+          opacity: 1;
+          transform: translateY(0);
         }
 
         .container {
@@ -95,6 +126,32 @@ export default function Home() {
           margin: 0 auto;
           padding-left: 20px;
           padding-right: 20px;
+        }
+
+        .reveal {
+          opacity: 0;
+          transform: translateY(26px);
+          animation: fadeUp 0.9s ease forwards;
+        }
+
+        .delay-1 {
+          animation-delay: 0.08s;
+        }
+
+        .delay-2 {
+          animation-delay: 0.16s;
+        }
+
+        .delay-3 {
+          animation-delay: 0.24s;
+        }
+
+        .delay-4 {
+          animation-delay: 0.32s;
+        }
+
+        .delay-5 {
+          animation-delay: 0.4s;
         }
 
         .topnav {
@@ -111,8 +168,8 @@ export default function Home() {
           font-weight: 800;
           font-size: 24px;
           letter-spacing: -0.5px;
-          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
-          background-size: 200% 200%;
+          background: linear-gradient(135deg, #7a3ff2 0%, #a24cf3 40%, #d84cbf 75%, #ff5e8a 100%);
+          background-size: 220% 220%;
           animation: gradientShift 7s ease infinite;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -135,7 +192,7 @@ export default function Home() {
         }
 
         .nav-links a:hover {
-          color: #6a46ff;
+          color: #9c47ec;
         }
 
         .hero {
@@ -151,7 +208,7 @@ export default function Home() {
           display: inline-block;
           padding: 10px 16px;
           border-radius: 999px;
-          background: #f3dfe3;
+          background: #f4e4ea;
           color: #7a5f69;
           font-weight: 700;
           font-size: 14px;
@@ -199,74 +256,73 @@ export default function Home() {
           border-radius: 999px;
           font-weight: 800;
           transition:
-            transform 0.2s ease,
-            box-shadow 0.2s ease,
-            background 0.2s ease,
-            color 0.2s ease,
-            border-color 0.2s ease;
+            transform 0.22s ease,
+            box-shadow 0.22s ease,
+            background 0.22s ease,
+            color 0.22s ease,
+            border-color 0.22s ease,
+            filter 0.22s ease;
           cursor: pointer;
         }
 
         .btn-primary {
-          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
-          background-size: 200% 200%;
+          background: linear-gradient(135deg, #7a3ff2 0%, #a24cf3 40%, #d84cbf 75%, #ff5e8a 100%);
+          background-size: 220% 220%;
           animation: gradientShift 7s ease infinite;
           color: #fff;
           padding: 15px 24px;
-          box-shadow: 0 16px 30px rgba(103, 76, 255, 0.24);
+          box-shadow: 0 16px 30px rgba(156, 71, 236, 0.24);
         }
 
         .btn-primary:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 20px 34px rgba(103, 76, 255, 0.3);
+          transform: translateY(-3px) scale(1.02);
+          box-shadow: 0 22px 38px rgba(156, 71, 236, 0.34);
+          filter: saturate(1.08);
         }
 
         .btn-secondary {
           background: #fff;
-          color: #6c53d8;
+          color: #8447ec;
           padding: 15px 24px;
-          border: 1px solid #d9d0ff;
+          border: 1px solid #e0d2ff;
           box-shadow: 0 10px 24px rgba(100, 70, 95, 0.06);
         }
 
         .btn-secondary:hover {
-          transform: translateY(-2px);
-          background: #faf8ff;
-          border-color: #b39dff;
-          box-shadow: 0 16px 30px rgba(100, 70, 95, 0.1);
+          transform: translateY(-3px) scale(1.02);
+          background: #fcf9ff;
+          border-color: #bf9cff;
+          box-shadow: 0 18px 32px rgba(132, 71, 236, 0.16);
         }
 
-        .hero-card-wrap {
-          min-height: 470px;
-          border-radius: 34px;
-          background: linear-gradient(145deg, #355cff 0%, #7a4cff 50%, #c347d9 100%);
-          background-size: 200% 200%;
-          animation: gradientShift 8s ease infinite;
-          box-shadow: 0 28px 62px rgba(102, 84, 190, 0.22);
-          padding: 16px;
-        }
-
-        .hero-card-inner {
-          height: 100%;
-          min-height: 438px;
-          border-radius: 26px;
-          overflow: hidden;
-          background: rgba(255, 255, 255, 0.16);
-          border: 1px solid rgba(255, 255, 255, 0.28);
-          backdrop-filter: blur(2px);
+        .hero-logo-wrap {
           display: flex;
-          align-items: center;
           justify-content: center;
-          padding: 24px;
+          align-items: center;
         }
 
-        .hero-card-inner img {
-          width: 100%;
-          height: 100%;
-          max-width: 360px;
+        .hero-logo-ring {
+          padding: 4px;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #7a3ff2 0%, #a24cf3 40%, #d84cbf 75%, #ff5e8a 100%);
+          background-size: 220% 220%;
+          animation: gradientShift 8s ease infinite;
+          box-shadow: 0 18px 42px rgba(141, 84, 190, 0.24);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .hero-logo-ring:hover {
+          transform: translateY(-4px) scale(1.02);
+          box-shadow: 0 24px 50px rgba(141, 84, 190, 0.3);
+        }
+
+        .hero-logo {
+          width: 270px;
+          height: 270px;
           object-fit: contain;
           display: block;
-          filter: drop-shadow(0 14px 30px rgba(60, 30, 120, 0.2));
+          border-radius: 50%;
+          background: transparent;
         }
 
         .section {
@@ -321,13 +377,13 @@ export default function Home() {
           margin-bottom: 14px;
           padding: 9px 14px;
           border-radius: 999px;
-          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
-          background-size: 200% 200%;
+          background: linear-gradient(135deg, #7a3ff2 0%, #a24cf3 40%, #d84cbf 75%, #ff5e8a 100%);
+          background-size: 220% 220%;
           animation: gradientShift 7s ease infinite;
           color: #fff;
           font-weight: 700;
           font-size: 13px;
-          box-shadow: 0 10px 22px rgba(103, 76, 255, 0.18);
+          box-shadow: 0 10px 22px rgba(156, 71, 236, 0.18);
         }
 
         .angebot-title,
@@ -349,8 +405,8 @@ export default function Home() {
           font-size: 38px;
           font-weight: 800;
           letter-spacing: -0.5px;
-          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
-          background-size: 200% 200%;
+          background: linear-gradient(135deg, #7a3ff2 0%, #a24cf3 40%, #d84cbf 75%, #ff5e8a 100%);
+          background-size: 220% 220%;
           animation: gradientShift 7s ease infinite;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -358,9 +414,18 @@ export default function Home() {
           color: transparent;
         }
 
+        .hausbesuche-box {
+          margin-top: 28px;
+          padding: 22px;
+          border-radius: 22px;
+          background: linear-gradient(135deg, #fff8ff, #fff);
+          border: 1px solid #ead0ff;
+          box-shadow: 0 10px 25px rgba(120, 80, 255, 0.08);
+        }
+
         .hilfe-box,
         .about-box {
-          background: linear-gradient(135deg, #fff 0%, #fcf0f4 100%);
+          background: linear-gradient(135deg, #fff 0%, #fdf2f8 100%);
           border: 1px solid #ead0d8;
           border-radius: 34px;
           padding: 34px;
@@ -443,8 +508,8 @@ export default function Home() {
         .cta-box {
           border-radius: 34px;
           padding: 40px 34px;
-          background: linear-gradient(135deg, #355cff 0%, #7a4cff 45%, #c347d9 100%);
-          background-size: 200% 200%;
+          background: linear-gradient(135deg, #7a3ff2 0%, #a24cf3 40%, #d84cbf 75%, #ff5e8a 100%);
+          background-size: 220% 220%;
           animation: gradientShift 8s ease infinite;
           color: #fff;
           box-shadow: 0 30px 62px rgba(98, 77, 190, 0.24);
@@ -467,13 +532,13 @@ export default function Home() {
 
         .btn-whatsapp-inline {
           background: #fff;
-          color: #684eff;
+          color: #8447ec;
           padding: 14px 22px;
         }
 
         .btn-whatsapp-inline:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 16px 30px rgba(255, 255, 255, 0.16);
+          transform: translateY(-3px) scale(1.02);
+          box-shadow: 0 18px 32px rgba(255, 255, 255, 0.18);
         }
 
         .whatsapp-float {
@@ -502,22 +567,15 @@ export default function Home() {
             grid-template-columns: 1fr;
           }
 
-          .hero-card-wrap {
-            min-height: auto;
-          }
-
-          .hero-card-inner {
-            min-height: 340px;
-          }
-
-          .hero-card-inner img {
-            max-width: 280px;
-          }
-
           .about-image img {
             margin: 0 auto;
             max-width: 360px;
             height: 420px;
+          }
+
+          .hero-logo {
+            width: 220px;
+            height: 220px;
           }
         }
 
@@ -544,7 +602,8 @@ export default function Home() {
           .about-box,
           .cta-box,
           .angebot-card,
-          .kontakt-card {
+          .kontakt-card,
+          .hausbesuche-box {
             padding: 24px;
           }
 
@@ -567,11 +626,16 @@ export default function Home() {
             right: 14px;
             bottom: 14px;
           }
+
+          .hero-logo {
+            width: 190px;
+            height: 190px;
+          }
         }
       `}</style>
 
-      <main className="page-shell">
-        <section className="container">
+      <main className={page-shell ${loaded ? "loaded" : ""}}>
+        <section className="container reveal delay-1">
           <nav className="topnav">
             <div className="brand">schnelleHilfe-ADHS</div>
 
@@ -584,7 +648,7 @@ export default function Home() {
           </nav>
         </section>
 
-        <section className="container">
+        <section className="container reveal delay-2">
           <div className="hero">
             <div>
               <div className="badge">
@@ -593,162 +657,3 @@ export default function Home() {
 
               <h1 className="hero-title">
                 Mehr Ruhe & Klarheit im Familienalltag
-              </h1>
-
-              <p className="hero-subtitle">
-                Ich begleite Eltern und Erwachsene mit klarer, verständlicher und
-                alltagstauglicher Unterstützung.
-              </p>
-
-              <p className="hero-text">
-                Wenn alles gleichzeitig laut wird, helfen keine langen
-                Erklärungen, sondern ruhige Orientierung, konkrete Schritte und
-                schnelle Entlastung.
-              </p>
-
-              <div className="button-row">
-                <a href="#kontakt" className="btn-primary">
-                  Kontakt aufnehmen
-                </a>
-                <a href="#angebote" className="btn-secondary">
-                  Angebote ansehen
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <div className="hero-card-wrap">
-                <div className="hero-card-inner">
-                  <img src="/logo.png" alt="Logo schnelleHilfe-ADHS" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="angebote" className="container section">
-          <div className="section-intro">
-            <h2 className="section-title">Angebote</h2>
-            <p className="section-text">
-              Klar, warm und unkompliziert. Sie bekommen keine Theorie-Flut,
-              sondern konkrete Hilfe, die wirklich in Ihren Alltag passt.
-            </p>
-          </div>
-
-          <div className="angebote-grid">
-            {angebote.map((item) => (
-              <div key={item.titel} className="angebot-card">
-                <div className="angebot-badge">{item.dauer}</div>
-
-                <h3 className="angebot-title">{item.titel}</h3>
-
-                <p className="angebot-text">{item.text}</p>
-
-                <div className="angebot-preis">{item.preis}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="hilfe" className="container section">
-          <div className="hilfe-box">
-            <h2 className="section-title" style={{ marginBottom: 18 }}>
-              Wobei ich helfe
-            </h2>
-
-            <div className="hilfe-grid">
-              {hilfen.map((punkt) => (
-                <div key={punkt} className="hilfe-item">
-                  ✨ {punkt}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="uebermich" className="container section">
-          <div className="about-box">
-            <div className="about-grid">
-              <div>
-                <h2 className="section-title" style={{ marginBottom: 14 }}>
-                  Über mich
-                </h2>
-
-                <p className="about-text">
-                  Ich bin Denise Schäfer und begleite Groß und Klein im Alltag
-                  mit ADHS. Mir ist wichtig, dass Sie sich verstanden fühlen und
-                  schnell konkrete Hilfe bekommen – ohne komplizierte Theorien.
-                </p>
-
-                <div className="about-subbox">
-                  <h3 className="about-subtitle">
-                    Meine Erfahrungen & Qualifikationen
-                  </h3>
-                  <p className="about-text">
-                    Ich bin gelernte Kinderpflegerin und ADHS-Coach und habe
-                    mich gezielt in diesem Bereich weitergebildet. Mein Wissen
-                    verbinde ich mit viel Erfahrung aus dem Alltag – genau das
-                    hilft wirklich ins Handeln zu kommen.
-                  </p>
-                </div>
-              </div>
-
-              <div className="about-image">
-                <img src="/profil.jpg.jfif" alt="Denise Schäfer" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="kontakt" className="container" style={{ paddingBottom: 36 }}>
-          <div className="section-intro">
-            <h2 className="section-title">Kontakt</h2>
-            <p className="section-text">
-              Sie können sich gern melden, wenn Sie Fragen haben oder ein
-              Gespräch vereinbaren möchten.
-            </p>
-          </div>
-
-          <div className="kontakt-grid">
-            {kontaktkarten.map((item) => (
-              <div key={item.titel} className="kontakt-card">
-                <div className="kontakt-icon">{item.icon}</div>
-                <h3 className="kontakt-title">{item.titel}</h3>
-                <p className="kontakt-text">{item.inhalt}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="container" style={{ paddingTop: 34, paddingBottom: 100 }}>
-          <div className="cta-box">
-            <h2 className="cta-title">Sie müssen da nicht allein durch.</h2>
-
-            <p className="cta-text">
-              Wenn Sie sich mehr Ruhe, Klarheit und konkrete Unterstützung für
-              Ihren Alltag wünschen, melden Sie sich gern bei mir.
-            </p>
-
-            <a
-              href="https://wa.me/491774670001"
-              target="_blank"
-              rel="noreferrer"
-              className="btn-whatsapp-inline"
-            >
-              Jetzt per WhatsApp schreiben
-            </a>
-          </div>
-        </section>
-
-        <a
-          href="https://wa.me/491774670001"
-          target="_blank"
-          rel="noreferrer"
-          className="whatsapp-float"
-        >
-          WhatsApp
-        </a>
-      </main>
-    </>
-  );
-}
