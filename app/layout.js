@@ -15,7 +15,7 @@ export const metadata = {
   title: "Schnelle Hilfe ADHS",
   description: "ADHS Coaching für Erwachsene & Kinder – schnelle, konkrete Hilfe im Alltag.",
   verification: {
-    google: "9u8sSV5dehSez5o5_FH_Sq27tSw000IvIuqyQ6FDekQ",
+    google: "9u8sSV5dehSez5o5_FH_Sq27tSwQO0lvIuqyQ6FDekQ",
   },
 };
 
