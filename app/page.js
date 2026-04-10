@@ -27,15 +27,15 @@ export default function Home() {
   },
   {
     icon: Sparkles,
-    title: "Coaching-Paket (3 Termine)",
-    text: "Ideal nach dem Erstgespräch: Drei Termine für mehr Ruhe und Struktur im Alltag – wir entwickeln gemeinsam Lösungen, die wirklich funktionieren.",
-    duration: "je ca. 60 Minuten",
-    price: "180 € (Paketpreis)"
+    title: "3er-Paket",
+    text: "Drei Beratungsstunden für mehr Ruhe und Struktur im Alltag.",
+    duration: "3 Termine",
+    price: "180 €"
   },
   {
     icon: Sparkles,
     title: "Akuthilfe",
-    text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Bei Absprache auch online möglich (z. B. Zoom).",
+    text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung.",
     duration: "flexibel",
     price: "nach Absprache"
   }
