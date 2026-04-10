@@ -706,15 +706,15 @@ Ich unterstütze Erwachsene und Kinder mit ADHS im Saarland dabei, mehr Ruhe, St
           </div>
 
           <div className="angebote-grid">
-            {angebote.map((item) => (
-              <div key={item.titel} className="angebot-card">
-                <div className="angebot-badge">{item.dauer}</div>
-                <h3 className="angebot-title">{item.titel}</h3>
-                <p className="angebot-text">{item.text}</p>
-                <div className="angebot-preis">{item.preis}</div>
-              </div>
-            ))}
-          </div>
+  {angebote.map((item) => (
+    <div key={item.title} className="angebot-card">
+      <div className="angebot-badge">{item.duration}</div>
+      <h3 className="angebot-title">{item.title}</h3>
+      <p className="angebot-text">{item.text}</p>
+      <div className="angebot-preis">{item.price}</div>
+    </div>
+  ))}
+</div>
 
           <div className="hausbesuche-box">
             <h3 className="angebot-title" style={{ marginBottom: 10 }}>
