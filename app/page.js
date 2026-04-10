@@ -16,21 +16,21 @@ export default function Home() {
     title: "Erstgespräch",
     text: "Wir klären gemeinsam Ihre Situation und schauen, wo Sie konkret Unterstützung brauchen.",
     duration: "ca. 60–90 Minuten",
-    price: "90 €",
+    price: "90 €"
   },
   {
     icon: Brain,
     title: "Einzelcoaching",
     text: "Individuelle Begleitung mit konkreten Lösungen für Ihren Familienalltag.",
     duration: "ca. 60 Minuten",
-    price: "70 €",
+    price: "70 €"
   },
   {
     icon: Sparkles,
     title: "Coaching-Paket (3 Termine)",
     text: "Ideal nach dem Erstgespräch: Drei Termine für mehr Ruhe und Struktur im Alltag – wir entwickeln gemeinsam Lösungen, die wirklich funktionieren.",
     duration: "je ca. 60 Minuten",
-    price: "180 € (Paketpreis)",
+    price: "180 € (Paketpreis)"
   },
   {
     icon: Sparkles,
@@ -38,7 +38,7 @@ export default function Home() {
     text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Bei Absprache auch online möglich (z. B. Zoom).",
     duration: "flexibel",
     price: "nach Absprache"
-  },
+  }
 ];
 
   const hilfen = [
