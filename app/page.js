@@ -16,7 +16,7 @@ export default function Home() {
     title: "Erstgespräch",
     text: "Wir klären gemeinsam Ihre Situation und schauen, wo Sie konkret Unterstützung brauchen.",
     duration: "ca. 60–90 Minuten",
-    price: "90 €",
+    price: "90 €"
   },
   {
     icon: Brain,
