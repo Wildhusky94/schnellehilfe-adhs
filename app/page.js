@@ -674,6 +674,10 @@ export default function Home() {
 Ich unterstütze Erwachsene und Kinder mit ADHS im Saarland dabei, mehr Ruhe, Struktur und Klarheit in ihren Alltag zu bringen – mit klaren, alltagstauglichen Lösungen, die wirklich funktionieren.
 </p>
 
+<p className="hero-text">
+ADHS Coaching im Saarland für Eltern, Kinder und Erwachsene – persönlich, alltagsnah und lösungsorientiert.
+</p>
+
               <div className="button-row">
                 <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
                   Termin anfragen
