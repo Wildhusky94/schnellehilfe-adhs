@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import { HeartHandshake, Brain, Sparkles } from "lucide-react";
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
