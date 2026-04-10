@@ -817,6 +817,10 @@ Ich unterstütze Erwachsene und Kinder mit ADHS im Saarland dabei, mehr Ruhe, St
           WhatsApp
         </a>
       </main>
+       <footer style={{ textAlign: "center", marginTop: "50px", fontSize: "14px" }}>
+  <a href="/impressum">Impressum</a> |{" "}
+  <a href="/datenschutz">Datenschutz</a>
+</footer>     
     </>
   );
 }
