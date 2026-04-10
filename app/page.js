@@ -656,7 +656,7 @@ export default function Home() {
               </div>
 
               <h1 className="hero-title">
-                ADHS Coaching im Saarland – Mehr Ruhe & Klarheit im Familienalltag
+                ADHS Coaching – Mehr Ruhe & Klarheit im Familienalltag
               </h1>
 
               
