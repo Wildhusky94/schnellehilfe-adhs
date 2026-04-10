@@ -28,7 +28,7 @@ export default function Home() {
   {
     icon: Sparkles,
     title: "3er-Paket",
-    text: "Drei Beratungsstunden für mehr Ruhe und Struktur im Alltag.",
+    text: "Ideal nach dem Erstgespräch: Drei Termine für mehr Klarheit und Struktur im Alltag.",
     duration: "3 Termine",
     price: "180 €"
   },
