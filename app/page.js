@@ -35,7 +35,7 @@ export default function Home() {
   {
     icon: Sparkles,
     title: "Akuthilfe",
-    text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung.",
+    text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Auch online möglich (z. B. Zoom).",
     duration: "flexibel",
     price: "nach Absprache"
   }
@@ -706,7 +706,18 @@ Ich unterstütze Erwachsene und Kinder mit ADHS im Saarland dabei, mehr Ruhe, St
           </div>
 
           <div className="angebote-grid">
-  {angebote.map((item) => (
+  {angebote.slice(0, 3).map((item) => (
+    <div key={item.title} className="angebot-card">
+      <div className="angebot-badge">{item.duration}</div>
+      <h3 className="angebot-title">{item.title}</h3>
+      <p className="angebot-text">{item.text}</p>
+      <div className="angebot-preis">{item.price}</div>
+    </div>
+  ))}
+</div>
+
+<div style={{ marginTop: "20px" }}>
+  {angebote.slice(3).map((item) => (
     <div key={item.title} className="angebot-card">
       <div className="angebot-badge">{item.duration}</div>
       <h3 className="angebot-title">{item.title}</h3>
