@@ -11,25 +11,35 @@ export default function Home() {
   }, []);
 
   const angebote = [
-    {
-      titel: "Erstgespräch",
-      dauer: "ca. 60–90 Minuten",
-      preis: "90 €",
-      text: "Wir schauen gemeinsam auf Ihre Situation und klären, welche Unterstützung Ihnen oder Ihrer Familie gerade wirklich hilft.",
-    },
-    {
-      titel: "Einzelcoaching",
-      dauer: "ca. 60 Minuten",
-      preis: "70 €",
-      text: "Konkrete Begleitung mit alltagstauglichen Lösungen für mehr Ruhe, Struktur und weniger Überforderung.",
-    },
-    {
-      titel: "Akuthilfe",
-      dauer: "flexibel",
-      preis: "nach Absprache",
-      text: "Schnelle Unterstützung, wenn gerade alles zu viel ist. Auf Wunsch auch unkompliziert online möglich (z.B. Zoom).",
-    },
-  ];
+  {
+    icon: HeartHandshake,
+    title: "Erstgespräch",
+    text: "Wir klären gemeinsam Ihre Situation und schauen, wo Sie konkret Unterstützung brauchen.",
+    duration: "ca. 60–90 Minuten",
+    price: "90 €",
+  },
+  {
+    icon: Brain,
+    title: "Einzelcoaching",
+    text: "Individuelle Begleitung mit konkreten Lösungen für Ihren Familienalltag.",
+    duration: "ca. 60 Minuten",
+    price: "70 €",
+  },
+  {
+    icon: Sparkles,
+    title: "Coaching-Paket (3 Termine)",
+    text: "Ideal nach dem Erstgespräch: Drei Termine für mehr Ruhe und Struktur im Alltag – wir entwickeln gemeinsam Lösungen, die wirklich funktionieren.",
+    duration: "je ca. 60 Minuten",
+    price: "180 € (Paketpreis)",
+  },
+  {
+    icon: Sparkles,
+    title: "Akuthilfe",
+    text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Bei Absprache auch online möglich (z. B. Zoom).",
+    duration: "flexibel",
+    price: "nach Absprache",
+  },
+];
 
   const hilfen = [
     "Überforderung im Familienalltag",
