@@ -226,15 +226,15 @@ export default function Home() {
           box-shadow: 0 8px 24px rgba(161, 77, 93, 0.08);
         }
 
-        .hero-title {
-          font-family: "Playfair Display", serif;
-          font-size: clamp(42px, 7vw, 78px);
-          line-height: 1.03;
-          margin: 0 0 18px;
-          color: #1a1a1a;
-          letter-spacing: -1.7px;
-          max-width: 780px;
-        }
+       .hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4.2vw, 48px);
+  line-height: 1.15;
+  margin: 0 0 18px;
+  color: #1a1a1a;
+  letter-spacing: -0.8px;
+  max-width: 680px;
+}
 
         .hero-subtitle {
           font-size: clamp(19px, 2.4vw, 28px);
