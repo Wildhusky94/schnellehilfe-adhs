@@ -350,7 +350,22 @@ export default function Home() {
           color: #1a1a1a;
           letter-spacing: -1px;
         }
+.info-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
 
+.info-text {
+  margin: 0;
+  max-width: 760px;
+  line-height: 1.7;
+  color: #655f69;
+  font-size: 16px;
+}
         .section-text {
           margin: 0;
           max-width: 760px;
@@ -764,34 +779,35 @@ export default function Home() {
         </section>
 <section className="container section">
 
-  <div className="angebot-card" style={{ marginBottom: "20px" }}>
-    <h2 className="section-title">Hilfe bei ADHS im Alltag</h2>
-    <p className="section-text">
+  <div className="angebot-card" style={{ marginBottom: "14px" }}>
+    <h2 className="info-title">Hilfe bei ADHS im Alltag</h2>
+    <p className="info-text">
       Wenn Sie sich im Alltag mit ADHS überfordert fühlen oder vermuten, dass ADHS eine Rolle spielt, sind Sie nicht allein.
       Viele Familien und Erwachsene stehen vor genau diesen Herausforderungen.
     </p>
   </div>
 
-  <div className="angebot-card" style={{ marginBottom: "20px" }}>
-    <h3 className="section-title">Verdacht auf ADHS – was tun?</h3>
-    <p className="section-text">
+  <div className="angebot-card" style={{ marginBottom: "14px" }}>
+    <h3 className="info-title">Verdacht auf ADHS – was tun?</h3>
+    <p className="info-text">
       Auch ohne Diagnose können Sie bereits Unterstützung bekommen. Ich helfe Ihnen, mehr Klarheit zu gewinnen und erste Schritte zu gehen,
       um den Alltag ruhiger und strukturierter zu gestalten.
     </p>
   </div>
 
-  <div className="angebot-card" style={{ marginBottom: "20px" }}>
-    <h3 className="section-title">ADHS bei Kindern verstehen</h3>
-    <p className="section-text">
+  <div className="angebot-card" style={{ marginBottom: "14px" }}>
+    <h3 className="info-title">ADHS bei Kindern verstehen</h3>
+    <p className="info-text">
       Kinder mit ADHS brauchen Verständnis und klare Strukturen. Gemeinsam finden wir Wege, wie Sie Ihr Kind besser begleiten und Konflikte reduzieren können.
     </p>
   </div>
 
-  <h3 className="section-title">ADHS bei Erwachsenen</h3>
-  <p className="section-text">
+  <div className="angebot-card">
+  <h3 className="info-title">ADHS bei Erwachsenen</h3>
+  <p className="info-text">
     Auch im Erwachsenenalter kann ADHS herausfordernd sein. Ich unterstütze Sie dabei, mehr Ordnung, Ruhe und Klarheit in Ihr Leben zu bringen.
   </p>
-</section>
+</div>
         <section id="uebermich" className="container section reveal delay-5">
           <div className="about-box">
             <div className="about-grid">
