@@ -808,6 +808,8 @@ export default function Home() {
     Auch im Erwachsenenalter kann ADHS herausfordernd sein. Ich unterstütze Sie dabei, mehr Ordnung, Ruhe und Klarheit in Ihr Leben zu bringen.
   </p>
 </div>
+ </section>
+              
         <section id="uebermich" className="container section reveal delay-5">
           <div className="about-box">
             <div className="about-grid">
