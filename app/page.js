@@ -666,16 +666,16 @@ export default function Home() {
               </div>
 
               <h1 className="hero-title">
-                ADHS Coaching – Mehr Ruhe & Klarheit im Familienalltag
-              </h1>
+  ADHS Coach im Saarland – individuelle Unterstützung für Familien und Erwachsene
+</h1>
 
               
               <p className="hero-subtitle">
-Ich unterstütze Erwachsene und Kinder mit ADHS im Saarland dabei, mehr Ruhe, Struktur und Klarheit in ihren Alltag zu bringen – mit klaren, alltagstauglichen Lösungen, die wirklich funktionieren.
+  Ich unterstütze Sie dabei, den Alltag mit ADHS oder bei Verdacht auf ADHS besser zu bewältigen – mit klaren, alltagstauglichen Strategien und individueller Begleitung.
 </p>
 
 <p className="hero-text">
-ADHS Coaching im Saarland für Eltern, Kinder und Erwachsene – persönlich, alltagsnah und lösungsorientiert.
+  ADHS Coach im Saarland für Familien, Kinder und Erwachsene – persönliche, alltagsnahe Unterstützung bei ADHS und Verdacht auf ADHS.
 </p>
 
               <div className="button-row">
