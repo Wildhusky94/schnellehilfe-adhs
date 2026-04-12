@@ -12,11 +12,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  verification: {
-    google: "9u8sSV5..." // dein Code bleibt hier drin
-  }
+  title: "ADHS Coach Saarland – Hilfe für Kinder, Erwachsene & Familien",
+  description: "ADHS Coaching im Saarland für Kinder, Erwachsene und Familien – Unterstützung bei ADHS und Verdacht auf ADHS. Alltagsnah, verständlich und individuell.",
 };
-
 export default function RootLayout({ children }) {
   return (
     <html
