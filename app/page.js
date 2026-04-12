@@ -762,7 +762,29 @@ export default function Home() {
             </div>
           </div>
         </section>
+<section className="container section">
+  <h2 className="section-title">Hilfe bei ADHS im Alltag</h2>
 
+  <p className="section-text">
+    Wenn Sie sich im Alltag mit ADHS überfordert fühlen oder vermuten, dass ADHS eine Rolle spielt, sind Sie nicht allein. 
+    Viele Familien und Erwachsene stehen vor genau diesen Herausforderungen.
+  </p>
+
+  <h3 className="section-title">Verdacht auf ADHS – was tun?</h3>
+  <p className="section-text">
+    Auch ohne Diagnose können Sie bereits Unterstützung bekommen. Ich helfe Ihnen, mehr Klarheit zu gewinnen und erste Schritte zu gehen, um den Alltag ruhiger und strukturierter zu gestalten.
+  </p>
+
+  <h3 className="section-title">ADHS bei Kindern verstehen</h3>
+  <p className="section-text">
+    Kinder mit ADHS brauchen Verständnis und klare Strukturen. Gemeinsam finden wir Wege, wie Sie Ihr Kind besser begleiten und Konflikte reduzieren können.
+  </p>
+
+  <h3 className="section-title">ADHS bei Erwachsenen</h3>
+  <p className="section-text">
+    Auch im Erwachsenenalter kann ADHS herausfordernd sein. Ich unterstütze Sie dabei, mehr Ordnung, Ruhe und Klarheit in Ihr Leben zu bringen.
+  </p>
+</section>
         <section id="uebermich" className="container section reveal delay-5">
           <div className="about-box">
             <div className="about-grid">
