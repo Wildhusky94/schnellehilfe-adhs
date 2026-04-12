@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ADHS Coach Saarland – Hilfe für Kinder, Erwachsene & Familien",
-  description: "ADHS Coaching im Saarland für Kinder, Erwachsene und Familien – Unterstützung bei ADHS und Verdacht auf ADHS. Alltagsnah, verständlich und individuell.",
+  title: "ADHS Coach im Saarland – Hilfe für Kinder, Erwachsene & Familien",
+description: "Unterstützung bei ADHS und Verdacht auf ADHS im Saarland – alltagsnah, verständlich und individuell. Für mehr Klarheit und Struktur im Alltag. Jetzt Hilfe finden.",
 };
 export default function RootLayout({ children }) {
   return (
