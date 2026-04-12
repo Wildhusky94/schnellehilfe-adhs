@@ -787,15 +787,6 @@ export default function Home() {
     </p>
   </div>
 
-  <div className="angebot-card">
-    <h3 className="section-title">ADHS bei Erwachsenen</h3>
-    <p className="section-text">
-      Auch im Erwachsenenalter kann ADHS herausfordernd sein. Ich unterstütze Sie dabei, mehr Ordnung, Ruhe und Klarheit in Ihr Leben zu bringen.
-    </p>
-  </div>
-
-</section>
-
   <h3 className="section-title">ADHS bei Erwachsenen</h3>
   <p className="section-text">
     Auch im Erwachsenenalter kann ADHS herausfordernd sein. Ich unterstütze Sie dabei, mehr Ordnung, Ruhe und Klarheit in Ihr Leben zu bringen.
