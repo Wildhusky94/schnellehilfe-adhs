@@ -792,7 +792,13 @@ export default function Home() {
               Darüber hinaus wird eine Fahrtkostenpauschale von 0,40 € / km berechnet.
             </p>
           </div>
-                <div className="angebot-card" style={{ marginTop: "20px" }}>
+                <div
+  className="angebot-card"
+  style={{
+    marginTop: "20px",
+    border: "2px solid #a24cf3"
+  }}
+>
   <div className="angebot-badge">2x monatlich · 90 Minuten</div>
 
   <h3 className="angebot-title">ADHS-Elternabend</h3>
