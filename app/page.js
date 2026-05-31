@@ -687,7 +687,37 @@ export default function Home() {
 <p className="hero-subtitle">
   Ich unterstütze Sie dabei, den Alltag mit ADHS oder bei Verdacht auf ADHS wieder klarer und leichter zu bewältigen – mit verständlichen, alltagstauglichen Strategien und individueller Begleitung.
 </p>
-  
+  <div
+  style={{
+    background: "#fff",
+    border: "2px solid #e9d4ff",
+    borderRadius: "20px",
+    padding: "16px 20px",
+    marginBottom: "22px",
+    maxWidth: "700px",
+    boxShadow: "0 10px 24px rgba(156,71,236,0.08)",
+  }}
+>
+  <div
+    style={{
+      fontWeight: "800",
+      color: "#8447ec",
+      marginBottom: "8px",
+    }}
+  >
+    🎁 Kostenloses 20-Minuten-Kennenlerngespräch
+  </div>
+
+  <div
+    style={{
+      color: "#655f69",
+      fontSize: "15px",
+      lineHeight: "1.6",
+    }}
+  >
+    Lernen Sie mich unverbindlich kennen – wir schauen gemeinsam, ob es harmoniert und wie ich Sie unterstützen kann.
+  </div>
+</div>
 
               <div className="button-row">
                 <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
