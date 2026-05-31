@@ -33,13 +33,7 @@ export default function Home() {
   price: "180 €"
 },
 
-{
-  icon: Sparkles,
-  title: "Akuthilfe",
-  text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Auch online möglich (z. B. Zoom).",
-  duration: "flexibel",
-  price: "nach Absprache"
-}
+
 ];
 
   const hilfen = [
@@ -753,7 +747,7 @@ export default function Home() {
           </div>
 
           <div className="angebote-grid">
-  {angebote.slice(0, 4).map((item) => (
+  {angebote.slice(0, 3).map((item) => (
     <div
   key={item.title}
   className="angebot-card"
