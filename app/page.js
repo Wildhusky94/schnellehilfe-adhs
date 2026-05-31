@@ -839,6 +839,12 @@ export default function Home() {
     Auch im Erwachsenenalter kann ADHS herausfordernd sein. Ich unterstütze Sie dabei, mehr Ordnung, Ruhe und Klarheit in Ihr Leben zu bringen.
   </p>
 </div>
+     <div className="angebot-card">
+  <h3 className="info-title">Orientierung bei Anträgen & Hilfen</h3>
+  <p className="info-text">
+    ADHS bringt oft nicht nur Herausforderungen im Alltag mit sich, sondern auch Fragen zu Unterstützungsmöglichkeiten. Gemeinsam schauen wir, welche Hilfen für Ihre Situation sinnvoll sein können – beispielsweise bei Fragen zu Pflegegrad, Nachteilsausgleich, Schulbegleitung, Beratungsstellen oder weiteren Hilfsangeboten.
+  </p>
+</div>         
  </section>
               
         <section id="uebermich" className="container section reveal delay-5">
