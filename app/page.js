@@ -48,6 +48,7 @@ export default function Home() {
     "Ruhiger mit Konflikten umgehen",
     "Konkrete Soforthilfe in stressigen Phasen",
     "Begleitung für Erwachsene mit ADHS",
+    "Orientierung bei Anträgen & Hilfen",
   ];
 
   const kontaktkarten = [
