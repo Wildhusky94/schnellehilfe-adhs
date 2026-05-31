@@ -35,14 +35,6 @@ export default function Home() {
 
 {
   icon: Sparkles,
-  title: "ADHS-Elternabend",
-  text: "Gemeinsam über Herausforderungen sprechen, neue Strategien kennenlernen und erleben, dass Sie mit Ihren Fragen nicht allein sind. Austausch, Verständnis, professionelle Begleitung und praktische Hilfen für den Familienalltag.",
-  duration: "2x monatlich · 90 Minuten",
-  price: "29 €",
-},
-
-{
-  icon: Sparkles,
   title: "Akuthilfe",
   text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Auch online möglich (z. B. Zoom).",
   duration: "flexibel",
@@ -800,6 +792,24 @@ export default function Home() {
               Darüber hinaus wird eine Fahrtkostenpauschale von 0,40 € / km berechnet.
             </p>
           </div>
+                <div className="angebot-card" style={{ marginTop: "20px" }}>
+  <div className="angebot-badge">2x monatlich · 90 Minuten</div>
+
+  <h3 className="angebot-title">ADHS-Elternabend</h3>
+
+  <p className="angebot-text">
+    Gemeinsam über Herausforderungen sprechen, neue Strategien kennenlernen
+    und erleben, dass Sie mit Ihren Fragen nicht allein sind. Austausch,
+    Verständnis, professionelle Begleitung und praktische Hilfen für den
+    Familienalltag.
+  </p>
+
+  <div className="angebot-preis">29 €</div>
+
+  <p className="angebot-text" style={{ marginTop: "8px", marginBottom: 0 }}>
+    Online per Zoom
+  </p>
+</div>
         </section>
 
         <section id="hilfe" className="container section reveal delay-4">
