@@ -798,17 +798,31 @@ export default function Home() {
   <h3 className="angebot-title">ADHS-Elternabend</h3>
 
   <p className="angebot-text">
-    Gemeinsam über Herausforderungen sprechen, neue Strategien kennenlernen
-    und erleben, dass Sie mit Ihren Fragen nicht allein sind. Austausch,
-    Verständnis, professionelle Begleitung und praktische Hilfen für den
-    Familienalltag.
-  </p>
+  Online-Elternabend in kleiner Gruppe für Eltern von Kindern mit ADHS.
+  Gemeinsam sprechen wir über Herausforderungen, neue Strategien und
+  praktische Hilfen für den Familienalltag.
 
-  <div className="angebot-preis">29 €</div>
+  Die Elternabende finden – je nach Interesse – bis zu 2-mal monatlich statt.
+
+  Bei Interesse können Sie sich gerne unverbindlich per WhatsApp melden.
+</p>
+
+  <div className="angebot-badge">
+  29 € pro Termin · 90 Minuten
+</div>
 
   <p className="angebot-text" style={{ marginTop: "8px", marginBottom: 0 }}>
     Online per Zoom
   </p>
+      <a
+  href={whatsappLink}
+  target="_blank"
+  rel="noreferrer"
+  className="btn-primary"
+  style={{ marginTop: "16px" }}
+>
+  Interesse per WhatsApp anmelden
+</a>
 </div>
         </section>
 
