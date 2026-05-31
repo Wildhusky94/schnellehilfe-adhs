@@ -26,19 +26,28 @@ export default function Home() {
     price: "70 €"
   },
   {
-    icon: Sparkles,
-    title: "3er-Paket",
-    text: "Ideal nach dem Erstgespräch: Drei Termine für mehr Klarheit und Struktur im Alltag.",
-    duration: "3 Termine",
-    price: "180 €"
-  },
-  {
-    icon: Sparkles,
-    title: "Akuthilfe",
-    text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Auch online möglich (z. B. Zoom).",
-    duration: "flexibel",
-    price: "nach Absprache"
-  }
+  icon: Sparkles,
+  title: "3er-Paket",
+  text: "Ideal nach dem Erstgespräch: Drei Termine für mehr Klarheit und Struktur im Alltag.",
+  duration: "3 Termine",
+  price: "180 €"
+},
+
+{
+  icon: Sparkles,
+  title: "ADHS-Elternabend",
+  text: "Gemeinsam über Herausforderungen sprechen, neue Strategien kennenlernen und erleben, dass Sie mit Ihren Fragen nicht allein sind. Austausch, Verständnis, professionelle Begleitung und praktische Hilfen für den Familienalltag.",
+  duration: "2x monatlich · 90 Minuten",
+  price: "29 €",
+},
+
+{
+  icon: Sparkles,
+  title: "Akuthilfe",
+  text: "Schnelle Unterstützung bei akuten Situationen oder Überforderung. Auch online möglich (z. B. Zoom).",
+  duration: "flexibel",
+  price: "nach Absprache"
+}
 ];
 
   const hilfen = [
@@ -752,7 +761,7 @@ export default function Home() {
           </div>
 
           <div className="angebote-grid">
-  {angebote.slice(0, 3).map((item) => (
+  {angebote.slice(0, 4).map((item) => (
     <div
   key={item.title}
   className="angebot-card"
