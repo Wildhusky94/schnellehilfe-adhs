@@ -717,7 +717,7 @@ export default function Home() {
 
               <div className="button-row">
                 <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
-                  Termin anfragen
+                  Interesse am Elternabend
                 </a>
                 <a href="#angebote" className="btn-secondary">
                   Angebote ansehen
@@ -802,7 +802,7 @@ export default function Home() {
   Gemeinsam sprechen wir über Herausforderungen, neue Strategien und
   praktische Hilfen für den Familienalltag.
 
-  Die Elternabende finden – je nach Interesse – bis zu 2-mal monatlich statt.
+  Die Elternabende finden – je nach Nachfrage – bis zu zweimal monatlich statt.
 
   Bei Interesse können Sie sich gerne unverbindlich per WhatsApp melden.
 </p>
@@ -815,7 +815,7 @@ export default function Home() {
     Online per Zoom
   </p>
       <a
-  href={whatsappLink}
+  href="https://wa.me/491774670001?text=Hallo%20Denise,%20ich%20interessiere%20mich%20für%20den%20ADHS-Elternabend%20und%20würde%20gerne%20weitere%20Informationen%20erhalten."
   target="_blank"
   rel="noreferrer"
   className="btn-primary"
