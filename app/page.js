@@ -717,7 +717,7 @@ export default function Home() {
 
               <div className="button-row">
                 <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
-                  Interesse am Elternabend
+                  Interesse am Elternabend?
                 </a>
                 <a href="#angebote" className="btn-secondary">
                   Angebote ansehen
