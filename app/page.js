@@ -815,7 +815,7 @@ export default function Home() {
     Online per Zoom
   </p>
       <a
-  href="https://wa.me/01774670001?text=Hallo%20Denise,%20ich%20interessiere%20mich%20für%20den%20ADHS-Elternabend%20und%20würde%20gerne%20weitere%20Informationen%20erhalten."
+  href="https://wa.me/491774670001?text=Hallo%20Denise%2C%20ich%20interessiere%20mich%20f%C3%BCr%20den%20ADHS-Elternabend%20und%20w%C3%BCrde%20gerne%20weitere%20Informationen%20erhalten."
   target="_blank"
   rel="noreferrer"
   className="btn-primary"
