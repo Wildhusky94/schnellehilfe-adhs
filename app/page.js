@@ -66,7 +66,8 @@ export default function Home() {
 
   const whatsappLink =
     "https://wa.me/491774670001?text=Hallo%20Denise,%20ich%20wei%C3%9F%20gerade%20nicht%20mehr%20so%20richtig%20weiter%20und%20w%C3%BCrde%20mir%20Unterst%C3%BCtzung%20w%C3%BCnschen.%20K%C3%B6nnen%20wir%20ein%20Erstgespr%C3%A4ch%20vereinbaren%3F";
-
+const whatsappElternabendLink =
+"https://wa.me/491774670001?text=Hallo%20Denise%2C%20ich%20interessiere%20mich%20f%C3%BCr%20den%20ADHS-Elternabend%20und%20w%C3%BCrde%20gerne%20weitere%20Informationen%20erhalten.";
   return (
     <>
       <style jsx global>{`
@@ -716,7 +717,7 @@ export default function Home() {
 </div>
 
               <div className="button-row">
-                <a href={whatsappLink} target="_blank" rel="noreferrer" className="btn-primary">
+                <a href={whatsappElternabendLink} target="_blank" rel="noreferrer" className="btn-primary">
                   Interesse am Elternabend?
                 </a>
                 <a href="#angebote" className="btn-secondary">
